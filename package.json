@@ -1,0 +1,6 @@
+{
+  "name": "omnilex-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Omnilex — AI-native legal services landing page (static site + waitlist serverless function)."
+}

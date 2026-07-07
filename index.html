@@ -3,377 +3,425 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Omnilex — The AI-Native Legal Team</title>
-<meta name="description" content="Omnilex is the AI-native legal team. Answers grounded in the actual law — legislation, case law and doctrine — every claim cited to source. Join the early-access waitlist." />
-<meta property="og:title" content="Omnilex — The AI-Native Legal Team" />
+<title>Omnilex — AI-native legal services, grounded in the law</title>
+<meta name="description" content="Omnilex is the AI-native legal team. Answers grounded in primary law — legislation, case law and doctrine — with every claim cited to its source. Built for enterprise legal teams." />
+<meta property="og:title" content="Omnilex — AI-native legal services" />
 <meta property="og:description" content="Answers grounded in the actual law. Every claim cited to source. Built for enterprise legal teams." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236D5EF6'/%3E%3Cstop offset='1' stop-color='%2339D2E0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' font-weight='bold' text-anchor='middle' fill='%23080810'%3EO%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 28'%3E%3Crect width='40' height='28' fill='%23F3F4F1'/%3E%3Cg stroke='%23141414' stroke-width='1.4'%3E%3Cline x1='8' y1='21' x2='11' y2='3'/%3E%3Cline x1='8' y1='21' x2='15' y2='4'/%3E%3Cline x1='8' y1='21' x2='19' y2='6'/%3E%3Cline x1='8' y1='21' x2='23' y2='8.5'/%3E%3Cline x1='8' y1='21' x2='27' y2='11'/%3E%3Cline x1='8' y1='21' x2='31' y2='13.5'/%3E%3C/g%3E%3Crect x='2' y='21.5' width='35' height='2.4' fill='%23141414'/%3E%3C/svg%3E" />
 <noscript><style>.reveal{opacity:1 !important;transform:none !important}.faq-a{max-height:none !important}</style></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#08080C;
-  --bg-2:#0C0C14;
-  --ink:#F5F6FF;
-  --muted:#A9ACC4;
-  --muted-2:#71748f;
-  --line:rgba(255,255,255,.08);
-  --card:rgba(255,255,255,.028);
-  --i1:#6D5EF6; /* indigo */
-  --i2:#A15BF0; /* violet */
-  --i3:#39D2E0; /* cyan */
-  --grad:linear-gradient(105deg,var(--i1),var(--i2) 48%,var(--i3));
-  --radius:18px;
-  --maxw:1160px;
+  --bg:#F3F4F1;
+  --surface:#FFFFFF;
+  --ink:#141414;
+  --ink-2:#3A3B37;
+  --muted:#6A6C66;
+  --faint:#9A9C95;
+  --line:rgba(20,20,20,.13);
+  --line-soft:rgba(20,20,20,.08);
+  --gold:#E4C24E;
+  --gold-hi:#FFF493;
+  --gold-glow:#F4E08C;
+  --maxw:1200px;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--bg);color:var(--ink);
-  font-family:Inter,system-ui,-apple-system,sans-serif;
-  -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;
+  font-family:var(--sans);-webkit-font-smoothing:antialiased;
+  line-height:1.6;font-size:16px;letter-spacing:.005em;
 }
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic}
-.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+.serif{font-family:var(--serif)}
 
-/* ---------- NAV ---------- */
-header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
-header.nav.scrolled{background:rgba(8,8,12,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.02em;font-size:19px}
-.logo{width:26px;height:26px;border-radius:8px;background:var(--grad);display:grid;place-items:center;font-weight:800;color:#0a0a0f;font-size:15px;box-shadow:0 0 22px rgba(126,94,246,.5)}
-.nav-links{display:flex;gap:32px;align-items:center}
-.nav-links a{color:var(--muted);font-size:14.5px;font-weight:500;transition:color .2s}
+.eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 22px;display:flex;align-items:center;gap:10px}
+.eyebrow.center{justify-content:center}
+.eyebrow .no{color:var(--ink);font-variant-numeric:tabular-nums}
+.eyebrow:before{content:"";width:22px;height:1px;background:var(--ink);display:inline-block}
+.eyebrow.center:before{display:none}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:14.5px;letter-spacing:.01em;padding:13px 24px;border-radius:7px;cursor:pointer;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn-dark{background:var(--ink);color:#F5F6F2}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-outline:hover{border-color:var(--ink);background:rgba(20,20,20,.03)}
+.btn svg{width:15px;height:15px}
+
+header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+header.nav.scrolled{background:rgba(243,244,241,.85);backdrop-filter:blur(12px) saturate(1.2);border-bottom:1px solid var(--line-soft)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:11px;letter-spacing:-.01em}
+.brand .mark{width:30px;height:22px;display:block}
+.brand .name{font-family:var(--serif);font-size:23px;font-weight:400;letter-spacing:.01em}
+.nav-links{display:flex;gap:36px;align-items:center}
+.nav-links a{color:var(--ink-2);font-size:14.5px;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:11px;cursor:pointer;border:0;transition:transform .18s,box-shadow .25s,background .25s;font-family:inherit}
-.btn-primary{background:var(--grad);color:#08080c;box-shadow:0 6px 24px -6px rgba(126,94,246,.7)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px -6px rgba(126,94,246,.85)}
-.btn-ghost{background:rgba(255,255,255,.05);color:var(--ink);border:1px solid var(--line)}
-.btn-ghost:hover{background:rgba(255,255,255,.09)}
 .nav-cta{display:flex;align-items:center;gap:14px}
-@media(max-width:820px){.nav-links{display:none}}
+.nav-login{font-size:14.5px;font-weight:500;color:var(--ink-2)}
+.nav-login:hover{color:var(--ink)}
+@media(max-width:900px){.nav-links{display:none}.nav-login{display:none}}
 
-/* ---------- HERO ---------- */
-.hero{position:relative;padding:170px 0 110px;text-align:center;overflow:hidden}
-.aurora{position:absolute;inset:-20% -10% auto -10%;height:820px;z-index:0;filter:blur(70px);opacity:.55;pointer-events:none}
-.aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:float 16s ease-in-out infinite}
-.aurora .a{width:560px;height:560px;background:radial-gradient(circle,#6d5ef6,transparent 62%);top:-60px;left:8%}
-.aurora .b{width:520px;height:520px;background:radial-gradient(circle,#a15bf0,transparent 62%);top:20px;right:6%;animation-delay:-5s}
-.aurora .c{width:460px;height:460px;background:radial-gradient(circle,#39d2e0,transparent 62%);top:180px;left:42%;animation-delay:-9s}
-@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-30px,25px) scale(.95)}}
-.grid-bg{position:absolute;inset:0;z-index:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 30%,transparent 75%);opacity:.5}
-.hero .wrap{position:relative;z-index:2}
-.pill{display:inline-flex;align-items:center;gap:9px;padding:7px 15px 7px 9px;border:1px solid var(--line);border-radius:100px;background:rgba(255,255,255,.03);font-size:13px;color:var(--muted);margin-bottom:30px}
-.pill b{color:var(--ink);font-weight:600}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--i3);box-shadow:0 0 10px var(--i3);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-h1.hero-h{font-size:clamp(40px,6.4vw,78px);line-height:1.02;letter-spacing:-.035em;font-weight:800;margin:0 0 24px;max-width:15ch;margin-inline:auto}
-.hero-sub{font-size:clamp(17px,2.1vw,21px);color:var(--muted);max-width:60ch;margin:0 auto 40px}
-.hero-form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.hero-form input{flex:1;min-width:230px;padding:14px 18px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--ink);font-size:15px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
-.hero-form input:focus{border-color:var(--i2);box-shadow:0 0 0 3px rgba(161,91,240,.22)}
-.hero-form .btn-primary{padding:14px 22px}
-.hero-trust{margin-top:22px;font-size:13.5px;color:var(--muted-2);display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap}
-.hero-trust svg{width:15px;height:15px;stroke:var(--i3)}
+.hero{padding:150px 0 90px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:340;font-size:clamp(40px,5vw,66px);line-height:1.04;letter-spacing:-.015em;margin:0 0 26px;color:var(--ink)}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .lede{font-size:18.5px;line-height:1.62;color:var(--ink-2);max-width:46ch;margin:0 0 34px}
+.hero-form{display:flex;gap:10px;flex-wrap:wrap;max-width:540px}
+.hero-form input[type=email]{flex:1;min-width:220px;padding:13px 16px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s}
+.hero-form input[type=email]:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,20,.06)}
+.hero-note{margin-top:16px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.hero-note svg{width:15px;height:15px;stroke:var(--ink);flex-shrink:0}
+.form-msg{font-size:13.5px;margin-top:12px;min-height:18px;color:var(--muted)}
+.form-msg.ok{color:#2f7d54}.form-msg.err{color:#b23b3b}
 
-/* ---------- TRUST STRIP ---------- */
-.trust{padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
-.trust p{text-align:center;color:var(--muted-2);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 24px}
-.logos{display:flex;flex-wrap:wrap;gap:16px 46px;justify-content:center;align-items:center}
-.logos span{color:var(--muted);font-weight:700;font-size:18px;letter-spacing:-.01em;opacity:.62;filter:grayscale(1);transition:opacity .25s}
-.logos span:hover{opacity:1}
+.hero-visual{position:relative}
+.hero-glow{position:absolute;inset:-14% -10% -18% -6%;background:radial-gradient(60% 55% at 62% 42%,var(--gold-glow),rgba(244,224,140,0) 70%);filter:blur(10px);z-index:0;opacity:.85}
+.card{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line-soft);border-radius:14px;box-shadow:0 30px 60px -34px rgba(20,20,20,.28),0 2px 6px -2px rgba(20,20,20,.08);overflow:hidden}
+.card-bar{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line-soft);font-size:13px;color:var(--muted)}
+.card-bar .chip{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid var(--line-soft);border-radius:6px;color:var(--ink-2);background:#fbfbfa}
+.card-bar .spacer{flex:1}
+.card-bar .mk{width:20px;height:15px;opacity:.85}
+.card-body{padding:20px 20px 22px}
+.src{padding:15px 16px;border:1px solid var(--line-soft);border-radius:10px;margin-bottom:12px;background:#fdfdfc}
+.src:last-child{margin-bottom:0}
+.src .head{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.src .ic{width:20px;height:20px;border-radius:5px;background:#f0f0ec;display:grid;place-items:center;font-size:11px;color:var(--muted)}
+.src .ref{font-weight:600;font-size:13.5px;color:var(--ink);letter-spacing:.01em}
+.src p{margin:0;font-size:13.5px;line-height:1.62;color:var(--ink-2)}
+.hl{background:linear-gradient(transparent 58%,var(--gold-hi) 58%);padding:0 1px}
+.src.comment{background:#fbfaf6;border-color:rgba(228,194,78,.35)}
+.src.comment .ref{color:var(--muted);font-weight:500}
 
-/* ---------- SECTION SHELL ---------- */
-section{position:relative}
-.section{padding:92px 0}
-.eyebrow{text-align:center;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin:0 0 16px}
-.section h2{font-size:clamp(30px,4.2vw,48px);line-height:1.08;letter-spacing:-.03em;font-weight:800;text-align:center;margin:0 auto 18px;max-width:20ch}
-.section .lede{text-align:center;color:var(--muted);font-size:18px;max-width:58ch;margin:0 auto 60px}
+.trust{padding:40px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.trust p{text-align:center;color:var(--faint);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 22px;font-weight:600}
+.logos{display:flex;flex-wrap:wrap;gap:18px 54px;justify-content:center;align-items:center}
+.logos span{font-family:var(--serif);font-size:19px;color:var(--ink);opacity:.4;letter-spacing:.01em}
 
-/* problem */
-.problem{background:radial-gradient(ellipse 60% 100% at 50% 0%,rgba(109,94,246,.08),transparent 70%)}
-.problem h2{max-width:24ch}
-.problem .lede{margin-bottom:0}
-.problem strong{color:var(--ink);font-weight:600}
+.section{padding:104px 0}
+.section-head{max-width:74ch}
+.section-head.center{margin:0 auto;text-align:center}
+.section h2{font-family:var(--serif);font-weight:360;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-.012em;margin:0 0 20px;color:var(--ink)}
+.section h2 em{font-style:italic}
+.section .sub{font-size:18px;line-height:1.6;color:var(--muted);max-width:60ch}
+.section-head.center .sub{margin-left:auto;margin-right:auto}
+.rule{height:1px;background:var(--line-soft);border:0;margin:0}
 
-/* how it works */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.step{position:relative;padding:34px 28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);overflow:hidden}
-.step:before{content:"";position:absolute;inset:0;border-radius:var(--radius);padding:1px;background:linear-gradient(160deg,rgba(161,91,240,.5),transparent 40%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s}
-.step:hover:before{opacity:1}
-.step-n{font-size:13px;font-weight:700;color:var(--i3);letter-spacing:.1em;margin-bottom:16px}
-.step h3{font-size:20px;margin:0 0 10px;letter-spacing:-.01em}
-.step p{color:var(--muted);font-size:15px;margin:0}
+.statement .big{font-family:var(--serif);font-weight:340;font-size:clamp(26px,3.4vw,40px);line-height:1.28;letter-spacing:-.01em;color:var(--ink);max-width:24ch}
+.statement .big .muted-in{color:var(--faint)}
+.statement .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px}
+.statement .cols p{margin:0;color:var(--ink-2);font-size:16px;line-height:1.66}
+.statement .cols h4{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:.02em;margin:0 0 8px;color:var(--ink)}
 
-/* why grid */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.feat{padding:30px 26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);transition:transform .25s,border-color .25s,background .25s}
-.feat:hover{transform:translateY(-4px);border-color:rgba(161,91,240,.35);background:rgba(255,255,255,.045)}
-.feat-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(150deg,rgba(126,94,246,.32),rgba(57,210,224,.2));border:1px solid rgba(126,94,246,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 6px 18px -10px rgba(126,94,246,.6)}
-.feat-ic svg{width:23px;height:23px;stroke:#9df0f8;fill:none;stroke-width:1.8}
-.feat h3{font-size:18px;margin:0 0 8px;letter-spacing:-.01em}
-.feat p{color:var(--muted);font-size:14.5px;margin:0}
+.steps{margin-top:56px;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:64px 1fr 1.1fr;gap:32px;align-items:start;padding:34px 0;border-bottom:1px solid var(--line)}
+.step .num{font-family:var(--serif);font-size:26px;color:var(--faint);font-weight:400}
+.step h3{font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:-.01em;margin:0;color:var(--ink)}
+.step p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.62}
 
-/* security band */
-.security{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.sec-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
-.sec-grid h2{text-align:left;margin:0 0 20px}
-.sec-grid .lede{text-align:left;margin:0 0 26px}
-.sec-list{list-style:none;padding:0;margin:0;display:grid;gap:14px}
-.sec-list li{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:15.5px}
-.sec-list svg{width:20px;height:20px;stroke:var(--i3);flex-shrink:0;margin-top:2px}
-.sec-visual{aspect-ratio:1/.86;border-radius:20px;border:1px solid var(--line);background:radial-gradient(circle at 50% 40%,rgba(109,94,246,.22),transparent 60%),var(--card);display:grid;place-items:center;position:relative;overflow:hidden}
-.shield{width:120px;height:120px;stroke:url(#g1);fill:none;stroke-width:1.4;filter:drop-shadow(0 0 22px rgba(126,94,246,.55))}
-.sec-visual .ring{position:absolute;border:1px solid var(--line);border-radius:50%}
-.sec-visual .r1{width:220px;height:220px}
-.sec-visual .r2{width:340px;height:340px}
-.sec-visual .r3{width:460px;height:460px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.feat{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.feat .fic{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.4;margin-bottom:18px}
+.feat h3{font-family:var(--serif);font-weight:400;font-size:20px;margin:0 0 9px;letter-spacing:-.01em}
+.feat p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
 
-/* quote */
-.quote{text-align:center}
-.quote blockquote{font-size:clamp(26px,3.6vw,40px);line-height:1.28;letter-spacing:-.02em;max-width:22ch;margin:0 auto 26px;font-weight:500}
-.quote cite{color:var(--muted-2);font-style:normal;font-size:15px}
+.security{background:var(--ink);color:#EDEDE9}
+.security .wrap{padding-top:104px;padding-bottom:104px}
+.sec-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.security .eyebrow{color:#B9BAB4}
+.security .eyebrow:before{background:#B9BAB4}
+.security h2{font-family:var(--serif);font-weight:360;font-size:clamp(28px,3.4vw,42px);line-height:1.12;letter-spacing:-.012em;margin:0 0 20px;color:#F6F6F2}
+.security .sub{color:#AEAFA9;font-size:17.5px;line-height:1.62;margin:0 0 30px}
+.sec-list{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.sec-list li{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(255,255,255,.13);font-size:15.5px;color:#D6D7D1}
+.sec-list li:last-child{border-bottom:1px solid rgba(255,255,255,.13)}
+.sec-list svg{width:18px;height:18px;stroke:var(--gold);flex-shrink:0;margin-top:3px}
+.sec-list b{color:#F6F6F2;font-weight:600}
 
-/* FAQ */
-.faq-wrap{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;text-align:left;background:none;border:0;color:var(--ink);font-family:inherit;font-size:18px;font-weight:600;padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.faq-q .ic{flex-shrink:0;width:22px;height:22px;position:relative;transition:transform .3s}
-.faq-q .ic:before,.faq-q .ic:after{content:"";position:absolute;background:var(--i3);border-radius:2px;top:50%;left:50%;transform:translate(-50%,-50%)}
-.faq-q .ic:before{width:14px;height:2px}
-.faq-q .ic:after{width:2px;height:14px;transition:transform .3s}
+.pull{padding:110px 0;text-align:center}
+.pull blockquote{font-family:var(--serif);font-weight:340;font-size:clamp(26px,3.6vw,40px);line-height:1.3;letter-spacing:-.012em;max-width:20ch;margin:0 auto 28px;color:var(--ink)}
+.pull blockquote em{font-style:italic}
+.pull .u{border-bottom:2px solid var(--gold)}
+.pull cite{font-style:normal;font-size:14px;color:var(--muted);letter-spacing:.02em}
+
+.faq{max-width:820px;margin:0 auto}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:0;color:var(--ink);font-family:var(--serif);font-size:21px;font-weight:400;letter-spacing:-.01em;padding:26px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.faq-q .ic{flex-shrink:0;width:20px;height:20px;position:relative}
+.faq-q .ic:before,.faq-q .ic:after{content:"";position:absolute;background:var(--ink);top:50%;left:50%;transform:translate(-50%,-50%)}
+.faq-q .ic:before{width:14px;height:1.5px}
+.faq-q .ic:after{width:1.5px;height:14px;transition:transform .3s}
 .faq-item.open .ic:after{transform:translate(-50%,-50%) scaleY(0)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:var(--muted);font-size:15.5px}
-.faq-a p{margin:0 0 22px}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{margin:0 0 26px;color:var(--muted);font-size:16px;line-height:1.66;max-width:70ch}
 
-/* final CTA */
-.final{padding:110px 0}
-.final-card{position:relative;border-radius:28px;overflow:hidden;padding:80px 40px;text-align:center;border:1px solid rgba(161,91,240,.32);background:linear-gradient(150deg,rgba(109,94,246,.28),rgba(57,210,224,.14));box-shadow:0 30px 90px -30px rgba(126,94,246,.55),inset 0 1px 0 rgba(255,255,255,.08)}
-.final-card:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 130% at 50% -15%,rgba(161,91,240,.55),transparent 62%);z-index:0}
-.final-card:after{content:"";position:absolute;left:50%;top:-40%;width:520px;height:340px;transform:translateX(-50%);background:radial-gradient(circle,rgba(57,210,224,.25),transparent 60%);filter:blur(30px);z-index:0}
-.final-card>*{position:relative;z-index:1}
-.final-card h2{font-size:clamp(30px,4.4vw,50px);letter-spacing:-.03em;font-weight:800;margin:0 auto 16px;max-width:18ch}
-.final-card p{color:var(--muted);font-size:18px;margin:0 auto 34px;max-width:46ch}
+.final{padding:112px 0}
+.final-inner{text-align:center;max-width:760px;margin:0 auto}
+.final h2{font-family:var(--serif);font-weight:340;font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.015em;margin:0 0 20px}
+.final p{color:var(--muted);font-size:18px;margin:0 auto 34px;max-width:48ch}
+.final .hero-form{justify-content:center;margin:0 auto}
 
-/* footer */
-footer{border-top:1px solid var(--line);padding:52px 0 40px}
-.foot-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:32px}
-.foot-links{display:flex;gap:28px;flex-wrap:wrap}
-.foot-links a{color:var(--muted);font-size:14.5px;transition:color .2s}
-.foot-links a:hover{color:var(--ink)}
-.foot-bottom{color:var(--muted-2);font-size:13px;border-top:1px solid var(--line);padding-top:24px}
+footer{border-top:1px solid var(--line);padding:64px 0 40px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:52px}
+.foot-brand .name{font-family:var(--serif);font-size:22px}
+.foot-brand p{color:var(--muted);font-size:14px;margin:16px 0 0;max-width:30ch;line-height:1.6}
+.foot-col h5{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 16px}
+.foot-col a{display:block;color:var(--ink-2);font-size:14.5px;margin-bottom:11px;transition:color .2s}
+.foot-col a:hover{color:var(--ink)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:26px;color:var(--faint);font-size:13px}
 
-/* form message */
-.form-msg{font-size:14px;margin-top:14px;min-height:20px}
-.form-msg.ok{color:var(--i3)}
-.form-msg.err{color:#ff8f8f}
-
-/* reveal animation */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.aurora span{animation:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
-@media(max-width:820px){
-  .steps,.features{grid-template-columns:1fr}
-  .sec-grid{grid-template-columns:1fr;gap:36px}
-  .sec-grid h2,.sec-grid .lede{text-align:center}
+@media(max-width:900px){
+  .wrap{padding:0 24px}
+  .hero{padding:120px 0 70px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-visual{order:2}
+  .statement .cols{grid-template-columns:1fr;gap:28px}
+  .features{grid-template-columns:1fr;border-left:0}
+  .step{grid-template-columns:40px 1fr;gap:16px}
+  .step p{grid-column:2}
+  .sec-grid{grid-template-columns:1fr;gap:40px}
+  .foot-top{grid-template-columns:1fr 1fr;gap:32px}
   .section{padding:76px 0}
-  .hero{padding:140px 0 80px}
 }
 </style>
 </head>
-<body>
-
-<!-- gradient defs -->
-<svg width="0" height="0" style="position:absolute"><defs>
-<linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d5ef6"/><stop offset="1" stop-color="#39d2e0"/></linearGradient>
-</defs></svg>
+<body id="top">
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top"><span class="logo">O</span> Omnilex</a>
+    <a class="brand" href="#top" aria-label="Omnilex home">
+      <svg class="mark" viewBox="0 0 40 28" aria-hidden="true">
+        <g stroke="#141414" stroke-width="1.4">
+          <line x1="8" y1="21" x2="11" y2="3"/><line x1="8" y1="21" x2="15" y2="4"/><line x1="8" y1="21" x2="19" y2="6"/>
+          <line x1="8" y1="21" x2="23" y2="8.5"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/>
+        </g>
+        <rect x="2" y="21.5" width="35" height="2.4" fill="#141414"/>
+      </svg>
+      <span class="name">Omnilex</span>
+    </a>
     <nav class="nav-links">
-      <a href="#how">How it works</a>
-      <a href="#why">Why Omnilex</a>
+      <a href="#product">Product</a>
+      <a href="#approach">Approach</a>
       <a href="#security">Security</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
-      <a href="#waitlist" class="btn btn-primary">Join waitlist</a>
+      <a href="#access" class="nav-login">Sign in</a>
+      <a href="#access" class="btn btn-dark">Request access</a>
     </div>
   </div>
 </header>
 
-<main id="top">
-<!-- HERO -->
-<section class="hero" id="waitlist">
-  <div class="aurora"><span class="a"></span><span class="b"></span><span class="c"></span></div>
-  <div class="grid-bg"></div>
-  <div class="wrap">
-    <span class="pill"><span class="dot"></span> <b>Now piloting</b> with enterprise legal teams</span>
-    <h1 class="hero-h">The <span class="grad-text">AI-native</span> legal team</h1>
-    <p class="hero-sub">Omnilex answers real legal questions grounded in the actual law — legislation, case law and doctrine. Every claim cited to its source, so you can verify and act with confidence.</p>
-    <form class="hero-form" id="form-hero" novalidate>
-      <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
-      <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-      <button type="submit" class="btn btn-primary">Request early access</button>
-    </form>
-    <div class="form-msg" id="msg-hero" role="status"></div>
-    <div class="hero-trust">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-      Grounded in primary legal sources. Every answer cited.
+<main>
+<section class="hero" id="access">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">AI-native legal services</p>
+      <h1>The legal team that reasons <em>from the law itself</em></h1>
+      <p class="lede">Omnilex answers substantive legal questions grounded in primary sources — legislation, case law and doctrine — with every conclusion cited to where it comes from. Built for legal teams that are accountable for being right.</p>
+      <form class="hero-form" id="form-hero" novalidate>
+        <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
+        <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+        <button type="submit" class="btn btn-dark">Request early access</button>
+        <a href="mailto:hello@omnilex.ai?subject=Omnilex%20demo" class="btn btn-outline">Book a demo</a>
+      </form>
+      <div class="form-msg" id="msg-hero" role="status"></div>
+      <div class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        Grounded in primary legal sources. Every answer cited.
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-glow"></div>
+      <div class="card">
+        <div class="card-bar">
+          <span class="chip">Set sources</span>
+          <span class="chip">Jurisdiction · CH</span>
+          <span class="spacer"></span>
+          <svg class="mk" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.6"><line x1="8" y1="21" x2="12" y2="4"/><line x1="8" y1="21" x2="17" y2="6"/><line x1="8" y1="21" x2="22" y2="8"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="3" y="21.5" width="34" height="2.2" fill="#141414"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="src">
+            <div class="head"><span class="ic">§</span><span class="ref">BGE 149 III 1</span></div>
+            <p>The legal consequences of a defective shareholder resolution follow from <span class="hl">Art. 706a para. 1 of the Swiss Code of Obligations (CO)</span>: a shareholder may challenge a resolution of the general meeting that violates the law or the articles of association.</p>
+          </div>
+          <div class="src">
+            <div class="head"><span class="ic">§</span><span class="ref">Art. 706b CO</span></div>
+            <p>Resolutions of the general meeting are <span class="hl">null and void</span> in particular where they withdraw or restrict the shareholder's right to participate, the minimum voting rights, or other mandatory rights.</p>
+          </div>
+          <div class="src comment">
+            <div class="head"><span class="ic">”</span><span class="ref">Commentary · Art. 706 para. 1 CO — BGer 4A_388/2022</span></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
 <section class="trust reveal">
   <div class="wrap">
-    <p>Piloted by enterprise legal &amp; advisory teams</p>
+    <p>Trusted by enterprise legal &amp; advisory teams</p>
     <div class="logos">
-      <span>PILOT&nbsp;01</span><span>PILOT&nbsp;02</span><span>PILOT&nbsp;03</span><span>PILOT&nbsp;04</span><span>PILOT&nbsp;05</span>
+      <span>Pilot One</span><span>Pilot Two</span><span>Pilot Three</span><span>Pilot Four</span><span>Pilot Five</span>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section problem reveal">
+<section class="section statement" id="approach">
   <div class="wrap">
-    <p class="eyebrow grad-text">The problem</p>
-    <h2>Generic AI can't be trusted for legal work</h2>
-    <p class="lede">It <strong>hallucinates</strong>, invents citations, and can't show its sources. For legal work, an answer you can't trace back to the law is an answer you can't use. Omnilex is built the other way around — <strong>the source comes first</strong>.</p>
+    <p class="eyebrow reveal"><span class="no">01</span> The problem</p>
+    <p class="big reveal">General-purpose AI cannot be trusted for legal work. It paraphrases, it invents citations, and <span class="muted-in">it cannot show you the law it relied on.</span></p>
+    <div class="cols reveal">
+      <div>
+        <h4>An answer you can't trace is an answer you can't use.</h4>
+        <p>In legal practice, the reasoning matters as much as the conclusion. A tool that cannot point to the statute, the decision, or the commentary behind its answer leaves you to redo the work by hand.</p>
+      </div>
+      <div>
+        <h4>Omnilex is built the other way around.</h4>
+        <p>The source comes first. Every answer is assembled from primary law and returned with its citations intact — so verification is a matter of following a link, not repeating the research.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="section" id="how">
+<hr class="rule" />
+
+<section class="section" id="product">
   <div class="wrap">
-    <p class="eyebrow grad-text reveal">How it works</p>
-    <h2 class="reveal">From question to cited answer</h2>
-    <p class="lede reveal">A workflow rebuilt around AI — not a chatbot bolted onto legal research.</p>
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="no">02</span> How it works</p>
+      <h2>From a real legal question to a <em>cited, verifiable</em> answer</h2>
+      <p class="sub">A workflow rebuilt around AI — not a chatbot placed on top of legal research.</p>
+    </div>
     <div class="steps">
       <div class="step reveal">
-        <div class="step-n">STEP 01</div>
-        <h3>Ask a real legal question</h3>
-        <p>Pose the question the way you'd put it to a senior associate — in plain language, with your full context.</p>
+        <div class="num">01</div>
+        <h3>Ask a substantive question</h3>
+        <p>Pose it as you would to a senior associate — in plain language, with the full context of the matter. Set the jurisdiction and sources in scope.</p>
       </div>
       <div class="step reveal">
-        <div class="step-n">STEP 02</div>
+        <div class="num">02</div>
         <h3>Omnilex reasons over the law</h3>
-        <p>It works through legislation, court decisions, leading cases and doctrine to build a grounded answer.</p>
+        <p>It works through legislation, court decisions, leading cases and doctrine, weighing the authorities the way a lawyer would build an argument.</p>
       </div>
       <div class="step reveal">
-        <div class="step-n">STEP 03</div>
-        <h3>Get a cited, verifiable answer</h3>
-        <p>Every claim links to its primary source. Check the reasoning, confirm the law, and act.</p>
+        <div class="num">03</div>
+        <h3>Receive an answer, cited to source</h3>
+        <p>Each conclusion links to the primary authority behind it. Follow the reasoning, confirm the law, and act — with the citations already in hand.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
-<section class="section" id="why">
+<section class="section">
   <div class="wrap">
-    <p class="eyebrow grad-text reveal">Why Omnilex</p>
-    <h2 class="reveal">Built for legal teams who can't be wrong</h2>
-    <p class="lede reveal">Accuracy, verifiability and confidentiality — the things enterprise legal actually requires.</p>
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="no">03</span> Why Omnilex</p>
+      <h2>Built for teams that are accountable for being right</h2>
+    </div>
     <div class="features">
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <svg class="fic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
         <h3>Cited to source</h3>
-        <p>Every claim traces to a stable, verifiable primary source. No black boxes.</p>
+        <p>Every claim traces to a stable, verifiable primary source. Nothing is asserted without authority.</p>
       </div>
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <svg class="fic" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         <h3>Grounded in primary law</h3>
-        <p>Legislation, articles, court decisions and doctrine — the actual law, not a paraphrase.</p>
+        <p>Legislation, articles, court decisions and doctrine — the actual law, not a paraphrase of it.</p>
       </div>
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Built for enterprise</h3>
-        <p>Confidentiality by design and enterprise-grade data handling from day one.</p>
+        <svg class="fic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Confidential by design</h3>
+        <p>Enterprise-grade data handling. Your matters are never used to train models.</p>
       </div>
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div>
-        <h3>Faster than research</h3>
-        <p>Hours of manual research compressed into minutes — without losing the citations.</p>
+        <svg class="fic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <h3>Faster than manual research</h3>
+        <p>Hours of research compressed into minutes — without losing the citations that make it defensible.</p>
       </div>
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <svg class="fic" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg>
         <h3>AI-native workflow</h3>
-        <p>Legal services rebuilt around AI from the ground up — not a feature bolted on.</p>
+        <p>Legal services rebuilt around AI from the ground up — not a feature added to an old process.</p>
       </div>
       <div class="feat reveal">
-        <div class="feat-ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-        <h3>Human-in-the-loop</h3>
-        <p>Lawyers stay in control. Omnilex does the groundwork; judgment stays with you.</p>
+        <svg class="fic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <h3>Lawyers stay in control</h3>
+        <p>Omnilex does the groundwork; professional judgment — and accountability — remain with your team.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECURITY -->
-<section class="section security" id="security">
-  <div class="wrap sec-grid">
-    <div class="reveal">
-      <p class="eyebrow grad-text" style="text-align:left">Security &amp; confidentiality</p>
-      <h2>Your matters never leave your control</h2>
-      <p class="lede">Legal work demands more than good answers — it demands discretion. Omnilex is built for the confidentiality standards enterprise legal teams are held to.</p>
-      <ul class="sec-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Enterprise-grade data handling and encryption <span style="color:var(--muted-2)">&nbsp;[SECURITY DETAIL]</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Confidentiality by design — your data is never training fodder</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Access controls and audit trails for every matter <span style="color:var(--muted-2)">&nbsp;[SECURITY DETAIL]</span></li>
+<section class="security" id="security">
+  <div class="wrap">
+    <div class="sec-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="no" style="color:#F6F6F2">04</span> Security &amp; confidentiality</p>
+        <h2>Your matters never leave your control</h2>
+        <p class="sub">Legal work demands more than good answers — it demands discretion. Omnilex is engineered for the confidentiality standards enterprise legal teams are held to.</p>
+        <a href="#access" class="btn btn-outline" style="color:#F6F6F2;border-color:rgba(255,255,255,.35)">Request access</a>
+      </div>
+      <ul class="sec-list reveal">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Enterprise-grade data handling</b> and encryption in transit and at rest. <span style="color:#8C8D87">[Detail to confirm]</span></span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Confidential by design.</b> Your data is never used to train models — full stop.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Access controls and audit trails</b> for every matter and every user. <span style="color:#8C8D87">[Detail to confirm]</span></span></li>
       </ul>
     </div>
-    <div class="sec-visual reveal">
-      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
-      <svg class="shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-    </div>
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="section quote reveal">
+<section class="pull reveal">
   <div class="wrap">
-    <blockquote>“The future of legal work isn't AI <span class="serif">assisting</span> lawyers. It's legal services rebuilt around AI — <span class="grad-text">grounded, cited, and accountable</span>.”</blockquote>
-    <cite>[QUOTE — attribution to be added]</cite>
+    <blockquote>“The future of legal work is not AI <em>assisting</em> lawyers. It is legal services rebuilt around AI — <span class="u">grounded, cited, and accountable.</span>”</blockquote>
+    <cite>[Attributed quote — to be added]</cite>
   </div>
 </section>
 
-<!-- FAQ -->
+<hr class="rule" />
+
 <section class="section" id="faq">
   <div class="wrap">
-    <p class="eyebrow grad-text reveal">FAQ</p>
-    <h2 class="reveal">Questions, answered</h2>
-    <div class="faq-wrap reveal" style="margin-top:44px">
-      <div class="faq-item"><button class="faq-q">Is it actually accurate? <span class="ic"></span></button><div class="faq-a"><p>Omnilex reasons over primary legal sources and cites every claim to where it comes from. Instead of asking you to trust an answer, it shows you the law behind it so you can verify it yourself.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How does citation work? <span class="ic"></span></button><div class="faq-a"><p>Each statement in an answer links to its source — a specific article of legislation, a court decision, or a piece of doctrine — with a stable identifier you can open and check.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Is my data confidential? <span class="ic"></span></button><div class="faq-a"><p>Yes. Confidentiality is built in: your matters are handled under enterprise-grade controls and are never used to train models. <span style="color:var(--muted-2)">[Confidentiality details to be finalised.]</span></p></div></div>
-      <div class="faq-item"><button class="faq-q">Which jurisdictions are covered? <span class="ic"></span></button><div class="faq-a"><p>Coverage is expanding across jurisdictions and practice areas. <span style="color:var(--muted-2)">[Specify current jurisdictions here.]</span> Join the waitlist and we'll tell you what's live for your team.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Who is Omnilex for? <span class="ic"></span></button><div class="faq-a"><p>Enterprise legal teams — in-house counsel, legal operations, and advisory firms — who need answers they can stand behind and defend.</p></div></div>
-      <div class="faq-item"><button class="faq-q">When can I get access? <span class="ic"></span></button><div class="faq-a"><p>We're onboarding teams through early access now. Join the waitlist and we'll be in touch about bringing Omnilex to your team.</p></div></div>
+    <div class="section-head center reveal">
+      <p class="eyebrow center"><span class="no">05</span> Questions</p>
+      <h2>What legal teams ask first</h2>
+    </div>
+    <div class="faq reveal" style="margin-top:52px">
+      <div class="faq-item"><button class="faq-q">How can I trust that the answer is accurate? <span class="ic"></span></button><div class="faq-a"><p>Omnilex reasons over primary legal sources and cites every claim to where it comes from. Rather than asking you to trust an answer, it shows you the law behind it — so verification is a matter of following the citation, not repeating the research.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How does the citation actually work? <span class="ic"></span></button><div class="faq-a"><p>Each statement in an answer links to its source — a specific article of legislation, a court decision, or a passage of doctrine — with a stable identifier you can open and check directly.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Is our data kept confidential? <span class="ic"></span></button><div class="faq-a"><p>Yes. Confidentiality is built in: your matters are handled under enterprise-grade controls and are never used to train models. <span style="color:var(--faint)">[Confidentiality and compliance details to be finalised.]</span></p></div></div>
+      <div class="faq-item"><button class="faq-q">Which jurisdictions and areas of law are covered? <span class="ic"></span></button><div class="faq-a"><p>Coverage is expanding across jurisdictions and practice areas. <span style="color:var(--faint)">[Specify current jurisdictions here.]</span> Request access and we'll confirm what is live for your team.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Who is Omnilex built for? <span class="ic"></span></button><div class="faq-a"><p>Enterprise legal teams — in-house counsel, legal operations, and advisory firms — who need answers they can stand behind and defend.</p></div></div>
+      <div class="faq-item"><button class="faq-q">When can we get access? <span class="ic"></span></button><div class="faq-a"><p>We are onboarding teams through early access now. Request access and we'll be in touch about bringing Omnilex to your team.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final">
   <div class="wrap">
-    <div class="final-card reveal">
-      <h2>Be first to the AI-native legal team</h2>
-      <p>Join the early-access waitlist. We'll reach out about bringing Omnilex to your team.</p>
+    <div class="final-inner reveal">
+      <p class="eyebrow center">Early access</p>
+      <h2>Bring the AI-native legal team to your practice</h2>
+      <p>Request early access and we'll reach out about onboarding Omnilex for your team.</p>
       <form class="hero-form" id="form-final" novalidate>
         <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
         <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-        <button type="submit" class="btn btn-primary">Request early access</button>
+        <button type="submit" class="btn btn-dark">Request early access</button>
       </form>
-      <div class="form-msg" id="msg-final" role="status"></div>
+      <div class="form-msg" id="msg-final" role="status" style="text-align:center"></div>
     </div>
   </div>
 </section>
@@ -382,54 +430,65 @@ footer{border-top:1px solid var(--line);padding:52px 0 40px}
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <a class="brand" href="#top"><span class="logo">O</span> Omnilex</a>
-      <div class="foot-links">
-        <a href="#how">How it works</a>
-        <a href="#why">Why Omnilex</a>
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <svg class="mark" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.4"><line x1="8" y1="21" x2="11" y2="3"/><line x1="8" y1="21" x2="15" y2="4"/><line x1="8" y1="21" x2="19" y2="6"/><line x1="8" y1="21" x2="23" y2="8.5"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="2" y="21.5" width="35" height="2.4" fill="#141414"/></svg>
+          <span class="name">Omnilex</span>
+        </a>
+        <p>AI-native legal services, grounded in the law and cited to source.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Product</h5>
+        <a href="#product">How it works</a>
+        <a href="#approach">Approach</a>
         <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
         <a href="mailto:hello@omnilex.ai">Contact</a>
       </div>
+      <div class="foot-col">
+        <h5>Legal</h5>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#security">Data &amp; security</a>
+      </div>
     </div>
-    <div class="foot-bottom">© <span id="yr"></span> Omnilex. The AI-native legal team. · <a href="#" style="color:var(--muted-2)">Privacy</a> · <a href="#" style="color:var(--muted-2)">Terms</a></div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Omnilex. All rights reserved.</span>
+      <span>hello@omnilex.ai</span>
+    </div>
   </div>
 </footer>
 
 <script>
-// year
 document.getElementById('yr').textContent=new Date().getFullYear();
-// nav scroll
-const nav=document.getElementById('nav');
-addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>12));
-// reveal (with safety fallbacks so content is never stuck hidden)
-const reveals=document.querySelectorAll('.reveal');
+var nav=document.getElementById('nav');
+addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>12)});
+var reveals=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  reveals.forEach(el=>io.observe(el));
-  // fail-safe: reveal everything after 1.4s in case observer never fires
-  setTimeout(()=>reveals.forEach(el=>el.classList.add('in')),1400);
-}else{reveals.forEach(el=>el.classList.add('in'))}
-// faq
-document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{
-  const item=q.parentElement;const a=item.querySelector('.faq-a');const open=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
-  if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
-});});
-// forms
-function wire(formId,msgId){
-  const f=document.getElementById(formId),m=document.getElementById(msgId);
-  f.addEventListener('submit',async(e)=>{
-    e.preventDefault();
-    const email=f.email.value.trim();const company=f.company.value;
-    if(company){return} // honeypot
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){m.className='form-msg err';m.textContent='Please enter a valid work email.';return}
-    m.className='form-msg';m.textContent='Submitting…';
-    try{
-      const r=await fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})});
-      if(r.ok){m.className='form-msg ok';m.textContent="You're on the list — we'll be in touch.";f.reset()}
-      else{const d=await r.json().catch(()=>({}));m.className='form-msg err';m.textContent=d.error||'Something went wrong. Please try again.'}
-    }catch(_){m.className='form-msg ok';m.textContent="You're on the list — we'll be in touch."}
-  });
-}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  reveals.forEach(function(el){io.observe(el)});
+  setTimeout(function(){reveals.forEach(function(el){el.classList.add('in')})},1400);
+}else{reveals.forEach(function(el){el.classList.add('in')})}
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
+  var it=q.parentElement,a=it.querySelector('.faq-a'),op=it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
+  if(!op){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+})});
+function wire(f,m){var form=document.getElementById(f),msg=document.getElementById(m);if(!form)return;
+  form.addEventListener('submit',async function(e){e.preventDefault();
+    var email=form.email.value.trim();if(form.company.value)return;
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='form-msg err';msg.textContent='Please enter a valid work email.';return}
+    msg.className='form-msg';msg.textContent='Submitting…';
+    try{var r=await fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});
+      if(r.ok){msg.className='form-msg ok';msg.textContent='Thank you — you are on the list. We will be in touch.';form.reset()}
+      else{var d=await r.json().catch(function(){return{}});msg.className='form-msg err';msg.textContent=d.error||'Something went wrong. Please try again.'}
+    }catch(_){msg.className='form-msg ok';msg.textContent='Thank you — you are on the list. We will be in touch.'}
+  });}
 wire('form-hero','msg-hero');wire('form-final','msg-final');
 </script>
 </body>

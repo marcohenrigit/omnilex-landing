@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Omnilex — AI-native legal services, grounded in the law</title>
-<meta name="description" content="Omnilex is the AI-native legal team. Answers grounded in primary law — legislation, case law and doctrine — with every claim cited to its source. Built for enterprise legal teams." />
+<title>Omnilex — Ask the law a question. Get an answer you can cite.</title>
+<meta name="description" content="Omnilex is the AI-native legal team. Ask a question of the law and get an answer reasoned from legislation, case law and doctrine — with every conclusion cited to its source." />
 <meta property="og:title" content="Omnilex — AI-native legal services" />
-<meta property="og:description" content="Answers grounded in the actual law. Every claim cited to source. Built for enterprise legal teams." />
+<meta property="og:description" content="Ask the law a question. Get an answer you can cite. Grounded in primary sources, built for enterprise legal teams." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 28'%3E%3Crect width='40' height='28' fill='%23F3F4F1'/%3E%3Cg stroke='%23141414' stroke-width='1.4'%3E%3Cline x1='8' y1='21' x2='11' y2='3'/%3E%3Cline x1='8' y1='21' x2='15' y2='4'/%3E%3Cline x1='8' y1='21' x2='19' y2='6'/%3E%3Cline x1='8' y1='21' x2='23' y2='8.5'/%3E%3Cline x1='8' y1='21' x2='27' y2='11'/%3E%3Cline x1='8' y1='21' x2='31' y2='13.5'/%3E%3C/g%3E%3Crect x='2' y='21.5' width='35' height='2.4' fill='%23141414'/%3E%3C/svg%3E" />
@@ -16,28 +16,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#F3F4F1;
-  --surface:#FFFFFF;
-  --ink:#141414;
-  --ink-2:#3A3B37;
-  --muted:#6A6C66;
-  --faint:#9A9C95;
-  --line:rgba(20,20,20,.13);
-  --line-soft:rgba(20,20,20,.08);
-  --gold:#E4C24E;
-  --gold-hi:#FFF493;
-  --gold-glow:#F4E08C;
+  --bg:#F3F4F1;--surface:#FFFFFF;--ink:#141414;--ink-2:#3A3B37;--muted:#6A6C66;--faint:#9A9C95;
+  --line:rgba(20,20,20,.13);--line-soft:rgba(20,20,20,.08);
+  --gold:#E4C24E;--gold-hi:#FFF493;--gold-glow:#F4E08C;--gold-deep:#B99223;
   --maxw:1200px;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--sans);-webkit-font-smoothing:antialiased;
-  line-height:1.6;font-size:16px;letter-spacing:.005em;
-}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6;font-size:16px;letter-spacing:.005em}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
 .serif{font-family:var(--serif)}
@@ -69,37 +57,86 @@ header.nav.scrolled{background:rgba(243,244,241,.85);backdrop-filter:blur(12px) 
 .nav-login:hover{color:var(--ink)}
 @media(max-width:900px){.nav-links{display:none}.nav-login{display:none}}
 
-.hero{padding:150px 0 90px;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
-.hero h1{font-family:var(--serif);font-weight:340;font-size:clamp(40px,5vw,66px);line-height:1.04;letter-spacing:-.015em;margin:0 0 26px;color:var(--ink)}
+/* ---------- HERO / CONSOLE ---------- */
+.hero{padding:130px 0 64px;position:relative;overflow:hidden}
+.hero-center{max-width:860px;margin:0 auto;text-align:center}
+.hero h1{font-family:var(--serif);font-weight:340;font-size:clamp(38px,5.2vw,62px);line-height:1.05;letter-spacing:-.015em;margin:0 0 22px;color:var(--ink)}
 .hero h1 em{font-style:italic;font-weight:400}
-.hero .lede{font-size:18.5px;line-height:1.62;color:var(--ink-2);max-width:46ch;margin:0 0 34px}
-.hero-form{display:flex;gap:10px;flex-wrap:wrap;max-width:540px}
-.hero-form input[type=email]{flex:1;min-width:220px;padding:13px 16px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s}
-.hero-form input[type=email]:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,20,.06)}
-.hero-note{margin-top:16px;font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
-.hero-note svg{width:15px;height:15px;stroke:var(--ink);flex-shrink:0}
-.form-msg{font-size:13.5px;margin-top:12px;min-height:18px;color:var(--muted)}
-.form-msg.ok{color:#2f7d54}.form-msg.err{color:#b23b3b}
+.hero .lede{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:56ch;margin:0 auto 40px}
 
-.hero-visual{position:relative}
-.hero-glow{position:absolute;inset:-14% -10% -18% -6%;background:radial-gradient(60% 55% at 62% 42%,var(--gold-glow),rgba(244,224,140,0) 70%);filter:blur(10px);z-index:0;opacity:.85}
-.card{position:relative;z-index:1;background:var(--surface);border:1px solid var(--line-soft);border-radius:14px;box-shadow:0 30px 60px -34px rgba(20,20,20,.28),0 2px 6px -2px rgba(20,20,20,.08);overflow:hidden}
-.card-bar{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line-soft);font-size:13px;color:var(--muted)}
-.card-bar .chip{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border:1px solid var(--line-soft);border-radius:6px;color:var(--ink-2);background:#fbfbfa}
-.card-bar .spacer{flex:1}
-.card-bar .mk{width:20px;height:15px;opacity:.85}
-.card-body{padding:20px 20px 22px}
-.src{padding:15px 16px;border:1px solid var(--line-soft);border-radius:10px;margin-bottom:12px;background:#fdfdfc}
-.src:last-child{margin-bottom:0}
-.src .head{display:flex;align-items:center;gap:9px;margin-bottom:8px}
-.src .ic{width:20px;height:20px;border-radius:5px;background:#f0f0ec;display:grid;place-items:center;font-size:11px;color:var(--muted)}
-.src .ref{font-weight:600;font-size:13.5px;color:var(--ink);letter-spacing:.01em}
-.src p{margin:0;font-size:13.5px;line-height:1.62;color:var(--ink-2)}
-.hl{background:linear-gradient(transparent 58%,var(--gold-hi) 58%);padding:0 1px}
-.src.comment{background:#fbfaf6;border-color:rgba(228,194,78,.35)}
-.src.comment .ref{color:var(--muted);font-weight:500}
+.console{position:relative;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 40px 80px -46px rgba(20,20,20,.4),0 2px 8px -3px rgba(20,20,20,.08);overflow:hidden}
+.console:before{content:"";position:absolute;left:-8%;right:-8%;top:-40%;height:60%;background:radial-gradient(50% 60% at 50% 40%,var(--gold-glow),rgba(244,224,140,0) 72%);opacity:.55;z-index:0;pointer-events:none;transition:opacity .5s}
+.console.processing:before{opacity:.9}
+.console>*{position:relative;z-index:1}
+.console-top{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line-soft);font-size:12.5px;color:var(--muted);flex-wrap:wrap}
+.c-mark{width:26px;height:19px;flex-shrink:0}
+.c-mark line{transition:opacity .3s}
+.console.processing .c-mark line{animation:flick 1.1s ease-in-out infinite}
+@keyframes flick{0%,100%{opacity:1}50%{opacity:.25}}
+.c-mark line:nth-child(2){animation-delay:.1s}.c-mark line:nth-child(3){animation-delay:.2s}.c-mark line:nth-child(4){animation-delay:.3s}.c-mark line:nth-child(5){animation-delay:.4s}.c-mark line:nth-child(6){animation-delay:.5s}
+.c-src{color:var(--ink-2)}
+.c-jur{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid var(--line-soft);border-radius:6px;background:#fbfbfa;font-weight:600;letter-spacing:.04em}
+.c-jur:before{content:"";width:6px;height:6px;border-radius:50%;background:#3f9e6b}
 
+.qform{display:flex;align-items:center;gap:10px;padding:16px 18px}
+.qinput{flex:1;border:0;outline:0;background:transparent;font-family:var(--sans);font-size:17px;color:var(--ink);padding:8px 4px}
+.qinput::placeholder{color:var(--faint)}
+.qbtn{flex-shrink:0;width:42px;height:42px;border-radius:9px;border:0;background:var(--ink);color:#fff;cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s}
+.qbtn:hover{background:#000;transform:translateY(-1px)}
+.qbtn svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
+.chips{display:flex;gap:9px;flex-wrap:wrap;padding:0 18px 18px}
+.chip{font-family:var(--sans);font-size:13px;color:var(--ink-2);background:#faf9f6;border:1px solid var(--line-soft);border-radius:20px;padding:8px 14px;cursor:pointer;transition:border-color .2s,background .2s,color .2s}
+.chip:hover{border-color:var(--gold);background:#fdf8e8;color:var(--ink)}
+.chip .pre{color:var(--faint);margin-right:7px}
+
+.output{border-top:1px solid var(--line-soft);padding:22px 22px 20px;background:linear-gradient(180deg,#fdfdfc,#ffffff)}
+.o-block{margin-bottom:22px}
+.o-block:last-child{margin-bottom:0}
+.o-label{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.o-label .cnt{color:var(--muted);font-weight:600;letter-spacing:.04em}
+
+.trace{display:flex;flex-direction:column;gap:9px}
+.tstep{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--muted);opacity:0;transform:translateY(4px);transition:opacity .3s,transform .3s,color .3s}
+.tstep.show{opacity:1;transform:none}
+.tdot{width:15px;height:15px;border-radius:50%;border:1.5px solid var(--line);flex-shrink:0;position:relative;transition:border-color .3s,background .3s}
+.tstep.active{color:var(--ink-2)}
+.tstep.active .tdot{border-color:var(--gold-deep)}
+.tstep.active .tdot:after{content:"";position:absolute;inset:2px;border-radius:50%;background:var(--gold);animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(.6);opacity:.5}50%{transform:scale(1);opacity:1}}
+.tstep.done{color:var(--ink-2)}
+.tstep.done .tdot{border-color:var(--gold-deep);background:var(--gold-deep)}
+.tstep.done .tdot:after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:9px;font-weight:700}
+
+.answer{font-family:var(--serif);font-weight:400;font-size:18.5px;line-height:1.75;color:var(--ink);letter-spacing:-.003em}
+.answer .w{display:inline;opacity:0;filter:blur(3px);transition:opacity .28s ease,filter .28s ease}
+.answer .w.vis{opacity:1;filter:blur(0)}
+.cit{font-family:var(--sans);font-size:.66em;font-weight:600;color:var(--gold-deep);background:transparent;border:0;border-bottom:1.5px solid var(--gold);padding:0 1px 1px;margin:0 1px;cursor:pointer;white-space:nowrap;vertical-align:baseline;transition:background .2s,border-color .2s}
+.cit sup{font-size:.72em;margin-left:2px;color:var(--gold-deep)}
+.cit:hover,.cit.hot{background:var(--gold-hi)}
+
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.scard{border:1px solid var(--line-soft);border-radius:10px;padding:13px 15px;background:#fff;opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s,border-color .25s,box-shadow .25s}
+.scard.vis{opacity:1;transform:none}
+.scard.hot{border-color:var(--gold);box-shadow:0 0 0 3px rgba(228,194,78,.18)}
+.scard-h{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.scard .sn{width:19px;height:19px;border-radius:5px;background:var(--gold-deep);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;flex-shrink:0}
+.scard .sref{font-family:var(--sans);font-weight:600;font-size:13.5px;color:var(--ink)}
+.scard .sk{margin-left:auto;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.scard p{margin:0;font-size:13px;line-height:1.55;color:var(--muted)}
+
+.ans-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:13.5px;color:var(--muted)}
+.ans-foot .acts{display:flex;gap:10px}
+.ans-foot .btn{padding:10px 18px;font-size:13.5px}
+.reask{background:none;border:0;color:var(--gold-deep);font-family:var(--sans);font-weight:600;cursor:pointer;font-size:13.5px}
+.route-note{padding:0 22px;margin:-2px 0 0;font-size:12.5px;color:var(--muted);font-style:italic}
+
+.preview-note{font-size:12.5px;color:var(--faint);margin:16px 0 0;letter-spacing:.02em}
+.hero-actions{display:flex;gap:20px;align-items:center;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.hero-actions a{font-size:14.5px;font-weight:500}
+.hero-actions .textlink{color:var(--ink-2);border-bottom:1px solid var(--line)}
+.hero-actions .textlink:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- shared sections ---------- */
 .trust{padding:40px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
 .trust p{text-align:center;color:var(--faint);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 22px;font-weight:600}
 .logos{display:flex;flex-wrap:wrap;gap:18px 54px;justify-content:center;align-items:center}
@@ -167,7 +204,11 @@ header.nav.scrolled{background:rgba(243,244,241,.85);backdrop-filter:blur(12px) 
 .final-inner{text-align:center;max-width:760px;margin:0 auto}
 .final h2{font-family:var(--serif);font-weight:340;font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.015em;margin:0 0 20px}
 .final p{color:var(--muted);font-size:18px;margin:0 auto 34px;max-width:48ch}
-.final .hero-form{justify-content:center;margin:0 auto}
+.final .hero-form2{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto}
+.final .hero-form2 input{flex:1;min-width:220px;padding:13px 16px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none}
+.final .hero-form2 input:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,20,.06)}
+.form-msg{font-size:13.5px;margin-top:12px;min-height:18px;color:var(--muted);text-align:center}
+.form-msg.ok{color:#2f7d54}.form-msg.err{color:#b23b3b}
 
 footer{border-top:1px solid var(--line);padding:64px 0 40px}
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:52px}
@@ -180,13 +221,12 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){.reveal,.answer .w{opacity:1;transform:none;filter:none;transition:none}}
 
 @media(max-width:900px){
-  .wrap{padding:0 24px}
-  .hero{padding:120px 0 70px}
-  .hero-grid{grid-template-columns:1fr;gap:44px}
-  .hero-visual{order:2}
+  .wrap{padding:0 20px}
+  .hero{padding:104px 0 56px}
+  .sources{grid-template-columns:1fr}
   .statement .cols{grid-template-columns:1fr;gap:28px}
   .features{grid-template-columns:1fr;border-left:0}
   .step{grid-template-columns:40px 1fr;gap:16px}
@@ -194,6 +234,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
   .sec-grid{grid-template-columns:1fr;gap:40px}
   .foot-top{grid-template-columns:1fr 1fr;gap:32px}
   .section{padding:76px 0}
+  .c-src{display:none}
 }
 </style>
 </head>
@@ -202,13 +243,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="#top" aria-label="Omnilex home">
-      <svg class="mark" viewBox="0 0 40 28" aria-hidden="true">
-        <g stroke="#141414" stroke-width="1.4">
-          <line x1="8" y1="21" x2="11" y2="3"/><line x1="8" y1="21" x2="15" y2="4"/><line x1="8" y1="21" x2="19" y2="6"/>
-          <line x1="8" y1="21" x2="23" y2="8.5"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/>
-        </g>
-        <rect x="2" y="21.5" width="35" height="2.4" fill="#141414"/>
-      </svg>
+      <svg class="mark" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.4"><line x1="8" y1="21" x2="11" y2="3"/><line x1="8" y1="21" x2="15" y2="4"/><line x1="8" y1="21" x2="19" y2="6"/><line x1="8" y1="21" x2="23" y2="8.5"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="2" y="21.5" width="35" height="2.4" fill="#141414"/></svg>
       <span class="name">Omnilex</span>
     </a>
     <nav class="nav-links">
@@ -225,46 +260,56 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 </header>
 
 <main>
-<section class="hero" id="access">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">AI-native legal services</p>
-      <h1>The legal team that reasons <em>from the law itself</em></h1>
-      <p class="lede">Omnilex answers substantive legal questions grounded in primary sources — legislation, case law and doctrine — with every conclusion cited to where it comes from. Built for legal teams that are accountable for being right.</p>
-      <form class="hero-form" id="form-hero" novalidate>
-        <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
-        <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-        <button type="submit" class="btn btn-dark">Request early access</button>
-        <a href="mailto:hello@omnilex.ai?subject=Omnilex%20demo" class="btn btn-outline">Book a demo</a>
+<!-- HERO: live console -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-center">
+      <p class="eyebrow center">AI-native legal research</p>
+      <h1>Ask the law a question.<br><em>Get an answer you can cite.</em></h1>
+      <p class="lede">Omnilex reasons over legislation, case law and doctrine, then returns every conclusion with its source. This is the product — try it.</p>
+    </div>
+
+    <div class="console" id="console">
+      <div class="console-top">
+        <svg class="c-mark" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.6" fill="none"><line x1="8" y1="21" x2="11" y2="3"/><line x1="8" y1="21" x2="15" y2="4"/><line x1="8" y1="21" x2="19" y2="6"/><line x1="8" y1="21" x2="23" y2="8.5"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="3" y="21.5" width="34" height="2.2" fill="#141414"/></svg>
+        <span class="c-src">Sources · Swiss law — Code of Obligations, Civil Code, federal case law</span>
+        <span class="c-jur">Jurisdiction · CH</span>
+      </div>
+      <form class="qform" id="qform">
+        <input class="qinput" id="q" placeholder="Ask a question of Swiss law…" autocomplete="off" aria-label="Ask a question of Swiss law" />
+        <button class="qbtn" id="qbtn" type="submit" aria-label="Ask Omnilex"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
-      <div class="form-msg" id="msg-hero" role="status"></div>
-      <div class="hero-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-        Grounded in primary legal sources. Every answer cited.
+      <p class="route-note" id="routenote" hidden></p>
+      <div class="chips" id="chips">
+        <button class="chip" data-ex="a" type="button"><span class="pre">Try</span>Can a shareholder challenge a resolution of the general meeting?</button>
+        <button class="chip" data-ex="b" type="button"><span class="pre">Try</span>Is a dismissal during an employee's illness valid?</button>
+        <button class="chip" data-ex="c" type="button"><span class="pre">Try</span>Can a mandate be terminated at any time?</button>
+      </div>
+      <div class="output" id="output" hidden aria-live="polite">
+        <div class="o-block">
+          <div class="o-label">Reasoning</div>
+          <div class="trace" id="trace"></div>
+        </div>
+        <div class="o-block">
+          <div class="o-label">Answer</div>
+          <div class="answer" id="answer"></div>
+        </div>
+        <div class="o-block">
+          <div class="o-label">Sources <span class="cnt" id="srccount"></span></div>
+          <div class="sources" id="sources"></div>
+        </div>
+        <div class="ans-foot" id="ansfoot" hidden>
+          <span>Every conclusion above is linked to its primary source — hover a citation.</span>
+          <div class="acts"><button class="reask" id="reask" type="button">Ask another</button> <a class="btn btn-dark" href="#access">Request full access</a></div>
+        </div>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="hero-glow"></div>
-      <div class="card">
-        <div class="card-bar">
-          <span class="chip">Set sources</span>
-          <span class="chip">Jurisdiction · CH</span>
-          <span class="spacer"></span>
-          <svg class="mk" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.6"><line x1="8" y1="21" x2="12" y2="4"/><line x1="8" y1="21" x2="17" y2="6"/><line x1="8" y1="21" x2="22" y2="8"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="3" y="21.5" width="34" height="2.2" fill="#141414"/></svg>
-        </div>
-        <div class="card-body">
-          <div class="src">
-            <div class="head"><span class="ic">§</span><span class="ref">BGE 149 III 1</span></div>
-            <p>The legal consequences of a defective shareholder resolution follow from <span class="hl">Art. 706a para. 1 of the Swiss Code of Obligations (CO)</span>: a shareholder may challenge a resolution of the general meeting that violates the law or the articles of association.</p>
-          </div>
-          <div class="src">
-            <div class="head"><span class="ic">§</span><span class="ref">Art. 706b CO</span></div>
-            <p>Resolutions of the general meeting are <span class="hl">null and void</span> in particular where they withdraw or restrict the shareholder's right to participate, the minimum voting rights, or other mandatory rights.</p>
-          </div>
-          <div class="src comment">
-            <div class="head"><span class="ic">”</span><span class="ref">Commentary · Art. 706 para. 1 CO — BGer 4A_388/2022</span></div>
-          </div>
-        </div>
+
+    <div class="hero-center">
+      <p class="preview-note">Illustrative preview across selected Swiss-law questions · not legal advice</p>
+      <div class="hero-actions">
+        <a href="#access" class="btn btn-dark">Request early access</a>
+        <a href="#product" class="textlink">See how it works</a>
       </div>
     </div>
   </div>
@@ -273,9 +318,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 <section class="trust reveal">
   <div class="wrap">
     <p>Trusted by enterprise legal &amp; advisory teams</p>
-    <div class="logos">
-      <span>Pilot One</span><span>Pilot Two</span><span>Pilot Three</span><span>Pilot Four</span><span>Pilot Five</span>
-    </div>
+    <div class="logos"><span>Pilot One</span><span>Pilot Two</span><span>Pilot Three</span><span>Pilot Four</span><span>Pilot Five</span></div>
   </div>
 </section>
 
@@ -290,7 +333,7 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
       </div>
       <div>
         <h4>Omnilex is built the other way around.</h4>
-        <p>The source comes first. Every answer is assembled from primary law and returned with its citations intact — so verification is a matter of following a link, not repeating the research.</p>
+        <p>The source comes first. Every answer is assembled from primary law and returned with its citations intact — exactly as you saw above. Verification is a matter of following a link, not repeating the research.</p>
       </div>
     </div>
   </div>
@@ -303,24 +346,12 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
     <div class="section-head reveal">
       <p class="eyebrow"><span class="no">02</span> How it works</p>
       <h2>From a real legal question to a <em>cited, verifiable</em> answer</h2>
-      <p class="sub">A workflow rebuilt around AI — not a chatbot placed on top of legal research.</p>
+      <p class="sub">A workflow rebuilt around AI — not a chatbot placed on top of legal research. It is the same sequence the console runs above.</p>
     </div>
     <div class="steps">
-      <div class="step reveal">
-        <div class="num">01</div>
-        <h3>Ask a substantive question</h3>
-        <p>Pose it as you would to a senior associate — in plain language, with the full context of the matter. Set the jurisdiction and sources in scope.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">02</div>
-        <h3>Omnilex reasons over the law</h3>
-        <p>It works through legislation, court decisions, leading cases and doctrine, weighing the authorities the way a lawyer would build an argument.</p>
-      </div>
-      <div class="step reveal">
-        <div class="num">03</div>
-        <h3>Receive an answer, cited to source</h3>
-        <p>Each conclusion links to the primary authority behind it. Follow the reasoning, confirm the law, and act — with the citations already in hand.</p>
-      </div>
+      <div class="step reveal"><div class="num">01</div><h3>Ask a substantive question</h3><p>Pose it as you would to a senior associate — in plain language, with the full context of the matter. Set the jurisdiction and sources in scope.</p></div>
+      <div class="step reveal"><div class="num">02</div><h3>Omnilex reasons over the law</h3><p>It works through legislation, court decisions, leading cases and doctrine, weighing the authorities the way a lawyer would build an argument.</p></div>
+      <div class="step reveal"><div class="num">03</div><h3>Receive an answer, cited to source</h3><p>Each conclusion links to the primary authority behind it. Follow the reasoning, confirm the law, and act — with the citations already in hand.</p></div>
     </div>
   </div>
 </section>
@@ -332,36 +363,12 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
       <h2>Built for teams that are accountable for being right</h2>
     </div>
     <div class="features">
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-        <h3>Cited to source</h3>
-        <p>Every claim traces to a stable, verifiable primary source. Nothing is asserted without authority.</p>
-      </div>
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        <h3>Grounded in primary law</h3>
-        <p>Legislation, articles, court decisions and doctrine — the actual law, not a paraphrase of it.</p>
-      </div>
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h3>Confidential by design</h3>
-        <p>Enterprise-grade data handling. Your matters are never used to train models.</p>
-      </div>
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <h3>Faster than manual research</h3>
-        <p>Hours of research compressed into minutes — without losing the citations that make it defensible.</p>
-      </div>
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg>
-        <h3>AI-native workflow</h3>
-        <p>Legal services rebuilt around AI from the ground up — not a feature added to an old process.</p>
-      </div>
-      <div class="feat reveal">
-        <svg class="fic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
-        <h3>Lawyers stay in control</h3>
-        <p>Omnilex does the groundwork; professional judgment — and accountability — remain with your team.</p>
-      </div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><h3>Cited to source</h3><p>Every claim traces to a stable, verifiable primary source. Nothing is asserted without authority.</p></div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><h3>Grounded in primary law</h3><p>Legislation, articles, court decisions and doctrine — the actual law, not a paraphrase of it.</p></div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>Confidential by design</h3><p>Enterprise-grade data handling. Your matters are never used to train models.</p></div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><h3>Faster than manual research</h3><p>Hours of research compressed into minutes — without losing the citations that make it defensible.</p></div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg><h3>AI-native workflow</h3><p>Legal services rebuilt around AI from the ground up — not a feature added to an old process.</p></div>
+      <div class="feat reveal"><svg class="fic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg><h3>Lawyers stay in control</h3><p>Omnilex does the groundwork; professional judgment — and accountability — remain with your team.</p></div>
     </div>
   </div>
 </section>
@@ -410,18 +417,18 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
   </div>
 </section>
 
-<section class="final">
+<section class="final" id="access">
   <div class="wrap">
     <div class="final-inner reveal">
       <p class="eyebrow center">Early access</p>
       <h2>Bring the AI-native legal team to your practice</h2>
       <p>Request early access and we'll reach out about onboarding Omnilex for your team.</p>
-      <form class="hero-form" id="form-final" novalidate>
+      <form class="hero-form2" id="form-final" novalidate>
         <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
         <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
         <button type="submit" class="btn btn-dark">Request early access</button>
       </form>
-      <div class="form-msg" id="msg-final" role="status" style="text-align:center"></div>
+      <div class="form-msg" id="msg-final" role="status"></div>
     </div>
   </div>
 </section>
@@ -437,30 +444,11 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
         </a>
         <p>AI-native legal services, grounded in the law and cited to source.</p>
       </div>
-      <div class="foot-col">
-        <h5>Product</h5>
-        <a href="#product">How it works</a>
-        <a href="#approach">Approach</a>
-        <a href="#security">Security</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="foot-col">
-        <h5>Company</h5>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="mailto:hello@omnilex.ai">Contact</a>
-      </div>
-      <div class="foot-col">
-        <h5>Legal</h5>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#security">Data &amp; security</a>
-      </div>
+      <div class="foot-col"><h5>Product</h5><a href="#product">How it works</a><a href="#approach">Approach</a><a href="#security">Security</a><a href="#faq">FAQ</a></div>
+      <div class="foot-col"><h5>Company</h5><a href="#">About</a><a href="#">Careers</a><a href="mailto:hello@omnilex.ai">Contact</a></div>
+      <div class="foot-col"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a><a href="#security">Data &amp; security</a></div>
     </div>
-    <div class="foot-bottom">
-      <span>© <span id="yr"></span> Omnilex. All rights reserved.</span>
-      <span>hello@omnilex.ai</span>
-    </div>
+    <div class="foot-bottom"><span>© <span id="yr"></span> Omnilex. All rights reserved.</span><span>hello@omnilex.ai</span></div>
   </div>
 </footer>
 
@@ -489,7 +477,101 @@ function wire(f,m){var form=document.getElementById(f),msg=document.getElementBy
       else{var d=await r.json().catch(function(){return{}});msg.className='form-msg err';msg.textContent=d.error||'Something went wrong. Please try again.'}
     }catch(_){msg.className='form-msg ok';msg.textContent='Thank you — you are on the list. We will be in touch.'}
   });}
-wire('form-hero','msg-hero');wire('form-final','msg-final');
+wire('form-final','msg-final');
+
+/* ===== Omnilex live console ===== */
+(function(){
+  var EX={
+    a:{q:"Can a shareholder challenge a resolution of the general meeting?",
+      steps:["Identifying the legal issue","Retrieving statute — Code of Obligations","Reviewing federal case law","Weighing the authorities","Composing a cited answer"],
+      answer:"Yes — within limits. Under [[1|Art. 706 CO]], the board of directors and any shareholder may challenge a resolution of the general meeting that violates the law or the articles of association by bringing an action against the company. That action must be filed within two months of the general meeting ([[2|Art. 706a para. 1 CO]]); miss the deadline and the right lapses. A narrower set of grave defects makes a resolution null and void from the outset under [[3|Art. 706b CO]] — for instance, withdrawing or restricting a shareholder's mandatory participation or voting rights — and nullity may be raised at any time. The Federal Supreme Court construes those nullity grounds restrictively ([[4|BGE 149 III 1]]).",
+      sources:[
+        {n:1,ref:"Art. 706 CO",kind:"Legislation",snippet:"The board of directors and every shareholder may challenge resolutions of the general meeting that violate the law or the articles of association by bringing action against the company."},
+        {n:2,ref:"Art. 706a para. 1 CO",kind:"Legislation",snippet:"The right to challenge lapses if the action is not brought within two months of the general meeting."},
+        {n:3,ref:"Art. 706b CO",kind:"Legislation",snippet:"Resolutions of the general meeting are void in particular where they withdraw or restrict the right to participate or the minimum voting rights of shareholders."},
+        {n:4,ref:"BGE 149 III 1",kind:"Federal Supreme Court",snippet:"The grounds of nullity under Art. 706b CO are exhaustive and are to be construed restrictively."}
+      ]},
+    b:{q:"Is a dismissal during an employee's illness valid?",
+      steps:["Identifying the legal issue","Checking the protective periods","Retrieving statute — Code of Obligations","Reviewing case law","Composing a cited answer"],
+      answer:"Generally not, if it falls within a protected period. After probation, an employer may not give notice while the employee is prevented from working through no fault of their own due to illness or accident ([[1|Art. 336c para. 1 lit. b CO]]) — for 30 days in the first year of service, 90 days from the second to the fifth year, and 180 days thereafter. Notice given during this blocked period is void ([[2|Art. 336c para. 2 CO]]); if notice was given beforehand, the notice period is suspended and resumes once the block ends. Outside those periods a dismissal is valid, subject to the rules on abusive termination ([[3|Art. 336 CO]]).",
+      sources:[
+        {n:1,ref:"Art. 336c para. 1 lit. b CO",kind:"Legislation",snippet:"After the probation period, the employer may not terminate the employment while the employee is prevented from working through illness or accident — for 30, 90 or 180 days by length of service."},
+        {n:2,ref:"Art. 336c para. 2 CO",kind:"Legislation",snippet:"Notice given during a blocked period is void; notice given before it is suspended for the remaining duration of that period."},
+        {n:3,ref:"Art. 336 CO",kind:"Legislation",snippet:"A termination is abusive where given for certain protected reasons; abusive termination gives rise to compensation but does not void the notice."}
+      ]},
+    c:{q:"Can a mandate be terminated at any time?",
+      steps:["Identifying the legal issue","Retrieving statute — Code of Obligations","Reviewing federal case law","Assessing the mandatory character","Composing a cited answer"],
+      answer:"Yes. A simple mandate may be revoked or terminated by either party at any time ([[1|Art. 404 para. 1 CO]]), and the Federal Supreme Court treats this right as mandatory — it cannot be validly excluded by agreement. The catch is timing: a party who terminates at an inopportune moment must compensate the other for the damage caused by the untimely termination ([[2|Art. 404 para. 2 CO]]). The court has applied Art. 404 broadly to contracts qualifying as mandates, while acknowledging longstanding criticism of its mandatory nature ([[3|BGE 115 II 464]]).",
+      sources:[
+        {n:1,ref:"Art. 404 para. 1 CO",kind:"Legislation",snippet:"The mandate may be revoked or terminated at any time by either party."},
+        {n:2,ref:"Art. 404 para. 2 CO",kind:"Legislation",snippet:"A party revoking or terminating at an inopportune time must compensate the other for the resulting damage."},
+        {n:3,ref:"BGE 115 II 464",kind:"Federal Supreme Court",snippet:"The right to terminate a mandate at any time under Art. 404 CO is of mandatory law and cannot be excluded by agreement."}
+      ]}
+  };
+  var consoleEl=document.getElementById('console'),output=document.getElementById('output'),trace=document.getElementById('trace'),
+      answer=document.getElementById('answer'),sources=document.getElementById('sources'),srccount=document.getElementById('srccount'),
+      ansfoot=document.getElementById('ansfoot'),qin=document.getElementById('q'),qform=document.getElementById('qform'),
+      routenote=document.getElementById('routenote'),qbtn=document.getElementById('qbtn');
+  var busy=false;
+  function sleep(ms){return new Promise(function(r){setTimeout(r,ms)})}
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+  function buildAnswer(str){
+    var re=/\[\[(\d+)\|([^\]]+)\]\]/g,last=0,m,html='';
+    function words(t){return t.split(/(\s+)/).map(function(tok){return /^\s+$/.test(tok)?tok:(tok?'<span class="w">'+esc(tok)+'</span>':'')}).join('')}
+    while((m=re.exec(str))){html+=words(str.slice(last,m.index));
+      html+='<button class="w cit" type="button" data-n="'+m[1]+'">'+esc(m[2])+'<sup>'+m[1]+'</sup></button>';last=re.lastIndex}
+    html+=words(str.slice(last));return html;
+  }
+  function route(q){
+    q=(q||'').toLowerCase();
+    if(/(dismiss|terminat\w* the employ|notice period|ill|sick|incapacit|employee|employment|probation|maternit)/.test(q))return{k:'b',exact:true};
+    if(/(mandate|auftrag|agent|attorney|revoke|instruct)/.test(q))return{k:'c',exact:true};
+    if(/(shareholder|resolution|general meeting|annul|challenge|agm|board|assembly|void)/.test(q))return{k:'a',exact:true};
+    return{k:'a',exact:false};
+  }
+  async function run(key,note){
+    if(busy)return;busy=true;
+    output.hidden=false;ansfoot.hidden=true;trace.innerHTML='';answer.innerHTML='';sources.innerHTML='';srccount.textContent='';
+    routenote.hidden=!note; if(note)routenote.textContent=note;
+    consoleEl.classList.add('processing');qbtn.disabled=true;
+    var ex=EX[key];
+    output.scrollIntoView({behavior:'smooth',block:'nearest'});
+    for(var i=0;i<ex.steps.length;i++){
+      var el=document.createElement('div');el.className='tstep active';
+      el.innerHTML='<span class="tdot"></span><span>'+ex.steps[i]+'</span>';trace.appendChild(el);
+      requestAnimationFrame(function(node){return function(){node.classList.add('show')}}(el));
+      await sleep(reduce?60:430);el.classList.remove('active');el.classList.add('done');
+    }
+    await sleep(reduce?40:240);
+    answer.innerHTML=buildAnswer(ex.answer);
+    var ws=answer.querySelectorAll('.w');
+    ws.forEach(function(w,i){setTimeout(function(){w.classList.add('vis')},reduce?0:i*17)});
+    var wend=reduce?0:ws.length*17;
+    setTimeout(function(){
+      srccount.textContent='· '+ex.sources.length+' authorities';
+      ex.sources.forEach(function(s,i){
+        var c=document.createElement('div');c.className='scard';c.dataset.src=s.n;
+        c.innerHTML='<div class="scard-h"><span class="sn">'+s.n+'</span><span class="sref">'+s.ref+'</span><span class="sk">'+s.kind+'</span></div><p>'+s.snippet+'</p>';
+        sources.appendChild(c);setTimeout(function(){c.classList.add('vis')},reduce?0:i*90);
+      });
+      ansfoot.hidden=false;
+    },wend*0.4+120);
+    consoleEl.classList.remove('processing');qbtn.disabled=false;busy=false;
+  }
+  function hot(n,on){
+    var card=sources.querySelector('[data-src="'+n+'"]');if(card)card.classList.toggle('hot',on);
+    answer.querySelectorAll('.cit[data-n="'+n+'"]').forEach(function(c){c.classList.toggle('hot',on)});
+  }
+  answer.addEventListener('mouseover',function(e){var b=e.target.closest('.cit');if(b)hot(b.dataset.n,true)});
+  answer.addEventListener('mouseout',function(e){var b=e.target.closest('.cit');if(b)hot(b.dataset.n,false)});
+  answer.addEventListener('click',function(e){var b=e.target.closest('.cit');if(!b)return;
+    var card=sources.querySelector('[data-src="'+b.dataset.n+'"]');if(card){card.scrollIntoView({behavior:'smooth',block:'nearest'});hot(b.dataset.n,true);setTimeout(function(){hot(b.dataset.n,false)},1200)}});
+  document.getElementById('chips').addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;qin.value=EX[c.dataset.ex].q;run(c.dataset.ex)});
+  qform.addEventListener('submit',function(e){e.preventDefault();var v=qin.value.trim();if(!v)return;var r=route(v);
+    run(r.k,r.exact?null:'Preview covers selected Swiss-law questions — here is a closely related worked example.')});
+  document.getElementById('reask').addEventListener('click',function(){output.hidden=true;qin.value='';qin.focus();window.scrollTo({top:0,behavior:'smooth'})});
+})();
 </script>
 </body>
 </html>

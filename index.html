@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Omnilex — The Mind that runs your legal work, end to end</title>
-<meta name="description" content="Enterprises forward their legal matters to Omnilex. The Omnilex Mind — our AI-native legal infrastructure — carries each one out end to end, supervised by our lawyers." />
-<meta property="og:title" content="Omnilex — The Omnilex Mind" />
-<meta property="og:description" content="Forward the matter. The Mind handles the rest — supervised by our lawyers, delivered fully cited." />
+<title>Omnilex — Case study: an enterprise legal function, run by the Mind</title>
+<meta name="description" content="A customer case study: how one enterprise handed its legal work to Omnilex — carried out end to end by the Omnilex Mind, supervised by our lawyers — and the business case behind it." />
+<meta property="og:title" content="Omnilex — Customer case study" />
+<meta property="og:description" content="What we do, how it works, and the business case — told through one enterprise client." />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 28'%3E%3Crect width='40' height='28' fill='%23F3F4F1'/%3E%3Cg stroke='%23141414' stroke-width='1.4'%3E%3Cline x1='8' y1='21' x2='11' y2='3'/%3E%3Cline x1='8' y1='21' x2='15' y2='4'/%3E%3Cline x1='8' y1='21' x2='19' y2='6'/%3E%3Cline x1='8' y1='21' x2='23' y2='8.5'/%3E%3Cline x1='8' y1='21' x2='27' y2='11'/%3E%3Cline x1='8' y1='21' x2='31' y2='13.5'/%3E%3C/g%3E%3Crect x='2' y='21.5' width='35' height='2.4' fill='%23141414'/%3E%3C/svg%3E" />
@@ -19,7 +19,8 @@
   --bg:#F3F4F1;--surface:#FFFFFF;--ink:#141414;--ink-2:#3A3B37;--muted:#6A6C66;--faint:#9A9C95;
   --line:rgba(20,20,20,.13);--line-soft:rgba(20,20,20,.08);
   --gold:#E4C24E;--gold-hi:#FFF493;--gold-glow:#F4E08C;--gold-deep:#B99223;
-  --maxw:1200px;
+  --green:#3f7d54;
+  --maxw:1180px;
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
@@ -30,13 +31,13 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
 .serif{font-family:var(--serif)}
 
-.eyebrow{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 22px;display:flex;align-items:center;gap:10px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 22px;display:flex;align-items:center;gap:10px}
 .eyebrow.center{justify-content:center}
-.eyebrow .no{color:var(--ink);font-variant-numeric:tabular-nums}
-.eyebrow:before{content:"";width:22px;height:1px;background:var(--ink);display:inline-block}
+.eyebrow .no{color:var(--gold-deep);font-variant-numeric:tabular-nums}
+.eyebrow:before{content:"";width:22px;height:1px;background:var(--gold-deep);display:inline-block}
 .eyebrow.center:before{display:none}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:500;font-size:14.5px;letter-spacing:.01em;padding:13px 24px;border-radius:7px;cursor:pointer;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:500;font-size:14.5px;letter-spacing:.01em;padding:13px 24px;border-radius:7px;cursor:pointer;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s}
 .btn-dark{background:var(--ink);color:#F5F6F2}
 .btn-dark:hover{background:#000;transform:translateY(-1px)}
 .btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
@@ -46,209 +47,183 @@ a{color:inherit;text-decoration:none}
 header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
 header.nav.scrolled{background:rgba(243,244,241,.85);backdrop-filter:blur(12px) saturate(1.2);border-bottom:1px solid var(--line-soft)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:11px;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;gap:11px}
 .brand .mark{width:30px;height:22px;display:block}
-.brand .name{font-family:var(--serif);font-size:23px;font-weight:400;letter-spacing:.01em}
-.nav-links{display:flex;gap:36px;align-items:center}
+.brand .name{font-family:var(--serif);font-size:23px;font-weight:400}
+.nav-links{display:flex;gap:34px;align-items:center}
 .nav-links a{color:var(--ink-2);font-size:14.5px;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--ink)}
 .nav-cta{display:flex;align-items:center;gap:14px}
 .nav-login{font-size:14.5px;font-weight:500;color:var(--ink-2)}
 .nav-login:hover{color:var(--ink)}
-@media(max-width:960px){.nav-links{display:none}.nav-login{display:none}}
+@media(max-width:940px){.nav-links{display:none}.nav-login{display:none}}
 
-/* ---------- HERO ---------- */
-.hero{padding:126px 0 70px;position:relative;overflow:hidden}
-.hero-head{max-width:780px;margin:0 auto 44px;text-align:center}
-.hero h1{font-family:var(--serif);font-weight:340;font-size:clamp(38px,5vw,60px);line-height:1.05;letter-spacing:-.015em;margin:0 0 22px;color:var(--ink)}
-.hero h1 em{font-style:italic;font-weight:400}
-.hero .lede{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:58ch;margin:0 auto}
+/* ---------- HERO / NUTSHELL ---------- */
+.hero{padding:132px 0 60px}
+.hero-head{max-width:900px}
+.hero h1{font-family:var(--serif);font-weight:340;font-size:clamp(38px,5vw,60px);line-height:1.05;letter-spacing:-.015em;margin:0 0 24px}
+.hero h1 em{font-style:italic}
+.hero .lede{font-size:19px;line-height:1.6;color:var(--ink-2);max-width:60ch;margin:0 0 8px}
+.hero .lede b{font-weight:600;color:var(--ink)}
 
-/* ---------- THE MIND STAGE ---------- */
-.mind-stage{display:grid;grid-template-columns:minmax(320px,1fr) 1.15fr;gap:44px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:40px;box-shadow:0 44px 90px -50px rgba(20,20,20,.4),0 2px 8px -3px rgba(20,20,20,.07);position:relative;overflow:hidden}
-.mind-stage:before{content:"";position:absolute;left:0;top:-30%;width:60%;height:120%;background:radial-gradient(50% 50% at 40% 50%,var(--gold-glow),rgba(244,224,140,0) 70%);opacity:.5;pointer-events:none}
-.mind-wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:18px}
-
-.mind{position:relative;width:320px;height:320px}
-.m-glow{position:absolute;inset:26%;border-radius:50%;background:radial-gradient(circle,var(--gold-glow),rgba(244,224,140,0) 68%);filter:blur(6px);animation:breathe 4.5s ease-in-out infinite}
-.mind.working .m-glow{animation-duration:2.2s}
-@keyframes breathe{0%,100%{opacity:.45;transform:scale(1)}50%{opacity:.85;transform:scale(1.12)}}
-.mind svg{position:relative;z-index:1;width:100%;height:100%}
-.ring-out{fill:none;stroke:var(--line);stroke-width:1;stroke-dasharray:2 9;transform-origin:center;animation:spin 34s linear infinite}
-.ring-mid{fill:none;stroke:var(--line-soft);stroke-width:1}
-.ring-sup{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-dasharray:120 400;stroke-linecap:round;transform-origin:center;animation:spin 18s linear infinite;opacity:.7}
-.core-bg{fill:#fff;stroke:var(--line-soft)}
-.fan line{stroke:var(--ink);stroke-width:1.5}
-.fan line.g{stroke:var(--gold-deep)}
-.mind.working .fan line{animation:flick 1.3s ease-in-out infinite}
-.mind.working .fan line:nth-child(2){animation-delay:.12s}.mind.working .fan line:nth-child(3){animation-delay:.24s}.mind.working .fan line:nth-child(4){animation-delay:.36s}.mind.working .fan line:nth-child(5){animation-delay:.48s}.mind.working .fan line:nth-child(6){animation-delay:.6s}.mind.working .fan line:nth-child(7){animation-delay:.72s}
-@keyframes flick{0%,100%{opacity:1}50%{opacity:.3}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.sup-node{fill:var(--gold-deep)}
-.mind-cap{text-align:center}
-.mind-cap .t{font-family:var(--serif);font-size:21px;color:var(--ink)}
-.mind-cap .s{font-size:12.5px;color:var(--muted);margin-top:2px}
-.flow-tags{display:flex;justify-content:space-between;width:100%;max-width:300px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600}
-
-/* ops panel */
-.ops{position:relative;z-index:1}
-.ops-top{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:20px}
-.ops-top .live{display:inline-flex;align-items:center;gap:7px;margin-left:auto;text-transform:none;letter-spacing:0;color:var(--ink-2);font-weight:500}
-.ops-top .live:before{content:"";width:7px;height:7px;border-radius:50%;background:#3f9e6b;animation:pulse2 1.6s infinite}
-@keyframes pulse2{0%,100%{opacity:1}50%{opacity:.3}}
-.stepper{display:flex;gap:0;margin-bottom:22px}
-.pstep{flex:1;display:flex;flex-direction:column;gap:8px;position:relative}
-.pstep .bar{height:3px;border-radius:2px;background:var(--line-soft);overflow:hidden}
-.pstep .bar i{display:block;height:100%;width:0;background:var(--gold-deep);transition:width .3s linear}
-.pstep.done .bar i{width:100%}
-.pstep.active .bar i{width:100%;transition:width 2.2s linear}
-.pstep .lbl{font-size:11.5px;color:var(--faint);font-weight:600;letter-spacing:.02em;padding-right:10px}
-.pstep.active .lbl,.pstep.done .lbl{color:var(--ink-2)}
-
-.stage-view{min-height:224px;border:1px solid var(--line-soft);border-radius:12px;background:#fdfdfc;padding:20px 20px}
-.sv-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.sv-ic{width:26px;height:26px;border-radius:7px;background:#f0efe9;display:grid;place-items:center;flex-shrink:0}
-.sv-ic svg{width:15px;height:15px;stroke:var(--gold-deep);fill:none;stroke-width:1.7}
-.sv-title{font-family:var(--serif);font-size:19px;color:var(--ink);letter-spacing:-.01em}
-.sv-sub{font-size:12.5px;color:var(--muted)}
-.sv-body{font-size:14px;color:var(--ink-2);line-height:1.6}
-.sv-body.memo{font-family:var(--serif);font-size:16px;line-height:1.7;color:var(--ink)}
-.matter-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.mchip{font-size:12px;color:var(--ink-2);background:#fff;border:1px solid var(--line-soft);border-radius:6px;padding:6px 10px}
-.mchip b{color:var(--ink)}
-.auth{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line-soft);opacity:0;transform:translateY(4px);transition:.3s}
-.auth:last-child{border-bottom:0}.auth.show{opacity:1;transform:none}
-.auth .n{width:18px;height:18px;border-radius:5px;background:var(--gold-deep);color:#fff;font-size:10.5px;font-weight:700;display:grid;place-items:center;flex-shrink:0}
-.auth .r{font-weight:600;font-size:13px;color:var(--ink)}
-.auth .k{margin-left:auto;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);font-weight:600}
-.cit{font-family:var(--sans);font-size:.68em;font-weight:600;color:var(--gold-deep);border-bottom:1.5px solid var(--gold);padding:0 1px 1px;white-space:nowrap}
-.cit sup{font-size:.72em;margin-left:1px}
-.stamp{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid rgba(228,194,78,.5);background:#fdfaf0;border-radius:10px}
-.stamp .seal{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold-deep);display:grid;place-items:center;flex-shrink:0;color:var(--gold-deep)}
-.stamp .seal svg{width:20px;height:20px;stroke:var(--gold-deep);fill:none;stroke-width:2}
-.stamp .st{font-family:var(--serif);font-size:16px;color:var(--ink)}
-.stamp .ss{font-size:12.5px;color:var(--muted);margin-top:3px}
-.stamp .sig{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-2);margin-top:8px}
-.deliver-box{text-align:center;padding:8px 0}
-.deliver-box .big-check{width:44px;height:44px;border-radius:50%;background:var(--gold-deep);display:grid;place-items:center;margin:0 auto 12px}
-.deliver-box .big-check svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2.4}
-.deliver-box .dt{font-family:var(--serif);font-size:19px;color:var(--ink)}
-.deliver-box .dd{font-size:13px;color:var(--muted);margin-top:5px}
-.ops-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:16px;font-size:12.5px;color:var(--muted)}
-.replay{background:none;border:0;color:var(--gold-deep);font-family:var(--sans);font-weight:600;font-size:12.5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
-.replay svg{width:13px;height:13px;stroke:var(--gold-deep);fill:none;stroke-width:2}
-
-.hero-actions{display:flex;gap:16px;align-items:center;justify-content:center;margin-top:34px;flex-wrap:wrap}
+/* snapshot band */
+.snapshot{margin-top:44px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;box-shadow:0 30px 70px -46px rgba(20,20,20,.32)}
+.snap-metrics{display:grid;grid-template-columns:repeat(3,1fr)}
+.metric{padding:34px 30px;border-right:1px solid var(--line-soft);position:relative}
+.metric:last-child{border-right:0}
+.metric .v{font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,54px);line-height:1;letter-spacing:-.02em;color:var(--ink);display:flex;align-items:baseline;gap:2px}
+.metric .v .pre{color:var(--gold-deep)}
+.metric .v .suf{font-size:.5em;color:var(--gold-deep);margin-left:2px}
+.metric .k{font-size:13.5px;color:var(--muted);margin-top:12px;line-height:1.45}
+.snap-foot{display:flex;flex-wrap:wrap;gap:8px 26px;padding:18px 30px;border-top:1px solid var(--line-soft);background:#fbfbfa;font-size:13px;color:var(--muted)}
+.snap-foot b{color:var(--ink);font-weight:600}
+.snap-foot .sep{color:var(--faint)}
+.illus{margin-top:14px;font-size:12.5px;color:var(--faint);font-style:italic}
+.hero-actions{display:flex;gap:14px;align-items:center;margin-top:34px;flex-wrap:wrap}
 .hero-actions .textlink{color:var(--ink-2);border-bottom:1px solid var(--line);font-size:14.5px;font-weight:500}
 .hero-actions .textlink:hover{color:var(--ink);border-color:var(--ink)}
 
-/* ---------- shared sections ---------- */
-.trust{padding:40px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
-.trust p{text-align:center;color:var(--faint);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 22px;font-weight:600}
-.logos{display:flex;flex-wrap:wrap;gap:18px 54px;justify-content:center;align-items:center}
-.logos span{font-family:var(--serif);font-size:19px;color:var(--ink);opacity:.4}
-
-.section{padding:104px 0}
+/* ---------- SECTIONS ---------- */
+.section{padding:96px 0}
 .section-head{max-width:74ch}
 .section-head.center{margin:0 auto;text-align:center}
-.section h2{font-family:var(--serif);font-weight:360;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-.012em;margin:0 0 20px;color:var(--ink)}
+.section h2{font-family:var(--serif);font-weight:360;font-size:clamp(30px,3.6vw,44px);line-height:1.1;letter-spacing:-.012em;margin:0 0 20px}
 .section h2 em{font-style:italic}
-.section .sub{font-size:18px;line-height:1.6;color:var(--muted);max-width:62ch}
-.section-head.center .sub{margin-left:auto;margin-right:auto}
+.section .sub{font-size:18px;line-height:1.62;color:var(--muted);max-width:64ch}
 .rule{height:1px;background:var(--line-soft);border:0;margin:0}
 
-/* service flow — 4 steps */
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
-.fstep{padding:32px 26px 32px 0;border-right:1px solid var(--line);position:relative}
+/* challenge */
+.challenge .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
+.challenge .body p{font-size:16.5px;line-height:1.68;color:var(--ink-2);margin:0 0 16px;max-width:52ch}
+.challenge .body p:last-child{margin-bottom:0}
+.pains{border-top:1px solid var(--line)}
+.pain{display:flex;gap:16px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.pain .pv{font-family:var(--serif);font-size:26px;color:var(--ink);flex-shrink:0;min-width:96px}
+.pain .pk{color:var(--muted);font-size:14.5px;line-height:1.5}
+
+/* how it works — flow + timeline */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border-top:1px solid var(--line)}
+.fstep{padding:30px 24px 30px 0;border-right:1px solid var(--line)}
 .fstep:last-child{border-right:0;padding-right:0}
-.fstep .fn{font-family:var(--serif);font-size:15px;color:var(--gold-deep);margin-bottom:16px}
-.fstep h3{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:-.01em;margin:0 0 10px;color:var(--ink)}
-.fstep p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.6}
-.fstep .who{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--faint)}
+.fstep .fn{font-family:var(--serif);font-size:15px;color:var(--gold-deep);margin-bottom:14px}
+.fstep h3{font-family:var(--serif);font-weight:400;font-size:19px;letter-spacing:-.01em;margin:0 0 9px}
+.fstep p{margin:0;color:var(--muted);font-size:14px;line-height:1.58}
+.fstep .who{display:inline-block;margin-top:13px;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--faint)}
 .fstep .who.mind{color:var(--gold-deep)}
 
-/* supervision split */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:52px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.split .col{padding:38px 34px}
-.split .col+.col{border-left:1px solid var(--line)}
-.split .col .tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
-.split .col.mind .tag{color:var(--gold-deep)}
-.split .col.counsel .tag{color:var(--ink)}
-.split .col h3{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0 0 12px}
-.split .col p{margin:0;color:var(--muted);font-size:15px;line-height:1.62}
-.split .col.counsel{background:#fbfbf9}
+.timeline-card{margin-top:52px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden;box-shadow:0 30px 70px -50px rgba(20,20,20,.3)}
+.tc-top{display:flex;align-items:center;gap:12px;padding:18px 26px;border-bottom:1px solid var(--line-soft);font-size:13px;color:var(--muted);flex-wrap:wrap}
+.tc-top .mk{width:22px;height:16px}
+.tc-top b{color:var(--ink);font-weight:600}
+.tc-top .tag{margin-left:auto;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);font-weight:700}
+.tl{padding:12px 26px 22px}
+.tl-row{display:grid;grid-template-columns:88px 26px 1fr;gap:16px;align-items:start;padding:15px 0}
+.tl-row .t{font-variant-numeric:tabular-nums;font-size:14px;color:var(--ink);font-weight:600;padding-top:1px}
+.tl-rail{position:relative;display:flex;justify-content:center}
+.tl-rail .dot{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--gold-deep);margin-top:3px;z-index:1}
+.tl-rail:before{content:"";position:absolute;top:3px;bottom:-30px;width:2px;background:var(--line);left:50%;transform:translateX(-50%)}
+.tl-row:last-child .tl-rail:before{display:none}
+.tl-row.done .tl-rail .dot{background:var(--gold-deep)}
+.tl-row .c .a{font-size:15px;color:var(--ink);font-weight:600}
+.tl-row .c .b{font-size:13.5px;color:var(--muted);margin-top:2px;line-height:1.5}
+.tl-row .who{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--faint);margin-top:4px;display:inline-block}
+.tl-row .who.mind{color:var(--gold-deep)}
+.tl-foot{display:flex;flex-wrap:wrap;gap:8px 20px;padding:18px 26px;border-top:1px solid var(--line-soft);background:#fbfbfa;font-size:13.5px}
+.tl-foot .big{font-family:var(--serif);font-size:17px;color:var(--ink)}
+.tl-foot .vs{color:var(--muted)}
 
-/* capabilities grid */
-.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.cap{padding:30px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cap .ci{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.4;margin-bottom:16px}
-.cap h3{font-family:var(--serif);font-weight:400;font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
-.cap p{margin:0;color:var(--muted);font-size:14px;line-height:1.58}
+/* business case */
+.bcase{background:var(--ink);color:#EDEDE9}
+.bcase .wrap{padding-top:100px;padding-bottom:100px}
+.bcase .eyebrow{color:#B9BAB4}.bcase .eyebrow:before{background:var(--gold)}
+.bcase h2{font-family:var(--serif);font-weight:360;font-size:clamp(30px,3.8vw,46px);line-height:1.1;letter-spacing:-.012em;margin:0 0 20px;color:#F7F7F3}
+.bcase h2 em{font-style:italic}
+.bcase .sub{color:#AEAFA9;font-size:18px;line-height:1.62;max-width:64ch;margin:0 0 8px}
+.bcase-logic{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid rgba(255,255,255,.16)}
+.logic{padding:30px 28px 30px 0;border-right:1px solid rgba(255,255,255,.16)}
+.logic:last-child{border-right:0;padding-right:0}
+.logic .ln{font-family:var(--serif);font-size:15px;color:var(--gold);margin-bottom:12px}
+.logic h3{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:-.01em;margin:0 0 10px;color:#F7F7F3}
+.logic p{margin:0;color:#AEAFA9;font-size:14.5px;line-height:1.6}
 
-.security{background:var(--ink);color:#EDEDE9}
-.security .wrap{padding-top:104px;padding-bottom:104px}
-.sec-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.security .eyebrow{color:#B9BAB4}.security .eyebrow:before{background:#B9BAB4}
-.security h2{font-family:var(--serif);font-weight:360;font-size:clamp(28px,3.4vw,42px);line-height:1.12;letter-spacing:-.012em;margin:0 0 20px;color:#F6F6F2}
-.security .sub{color:#AEAFA9;font-size:17.5px;line-height:1.62;margin:0 0 30px}
-.sec-list{list-style:none;padding:0;margin:0;display:grid;gap:0}
-.sec-list li{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(255,255,255,.13);font-size:15.5px;color:#D6D7D1}
-.sec-list li:last-child{border-bottom:1px solid rgba(255,255,255,.13)}
-.sec-list svg{width:18px;height:18px;stroke:var(--gold);flex-shrink:0;margin-top:3px}
-.sec-list b{color:#F6F6F2;font-weight:600}
+.bars{margin-top:58px;display:grid;gap:30px;max-width:820px}
+.bar-block .bl{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.bar-block .bl .name{font-size:14px;color:#CFD0CA;letter-spacing:.02em}
+.bar-block .bl .save{font-size:13px;color:var(--gold);font-weight:600}
+.bar{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+.bar .lab{width:120px;font-size:12.5px;color:#9A9C95;flex-shrink:0}
+.bar .track{flex:1;height:30px;border-radius:6px;background:rgba(255,255,255,.06);overflow:hidden;position:relative}
+.bar .fill{height:100%;width:0;border-radius:6px;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.bar.before .fill{background:rgba(255,255,255,.22)}
+.bar.after .fill{background:linear-gradient(90deg,var(--gold-deep),var(--gold))}
+.bar .val{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12.5px;color:#F7F7F3;font-weight:600;font-variant-numeric:tabular-nums}
 
-.pull{padding:110px 0;text-align:center}
-.pull blockquote{font-family:var(--serif);font-weight:340;font-size:clamp(26px,3.6vw,40px);line-height:1.3;letter-spacing:-.012em;max-width:22ch;margin:0 auto 28px;color:var(--ink)}
-.pull blockquote em{font-style:italic}
-.pull .u{border-bottom:2px solid var(--gold)}
-.pull cite{font-style:normal;font-size:14px;color:var(--muted);letter-spacing:.02em}
+/* comparison table */
+.compare{margin-top:58px;border:1px solid rgba(255,255,255,.16);border-radius:14px;overflow:hidden}
+.crow{display:grid;grid-template-columns:1.1fr 1fr 1fr}
+.crow>div{padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.12)}
+.crow:last-child>div{border-bottom:0}
+.crow .lbl{color:#9A9C95;font-size:13.5px}
+.crow .b4{color:#CFD0CA;font-size:14.5px;border-left:1px solid rgba(255,255,255,.12)}
+.crow .om{color:#F7F7F3;font-size:14.5px;font-weight:600;border-left:1px solid rgba(255,255,255,.12)}
+.crow.head>div{background:rgba(255,255,255,.04);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#9A9C95}
+.crow.head .om{color:var(--gold)}
 
-.faq{max-width:820px;margin:0 auto}
-.faq-item{border-top:1px solid var(--line)}
-.faq-item:last-child{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;text-align:left;background:none;border:0;color:var(--ink);font-family:var(--serif);font-size:21px;font-weight:400;letter-spacing:-.01em;padding:26px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.faq-q .ic{flex-shrink:0;width:20px;height:20px;position:relative}
-.faq-q .ic:before,.faq-q .ic:after{content:"";position:absolute;background:var(--ink);top:50%;left:50%;transform:translate(-50%,-50%)}
-.faq-q .ic:before{width:14px;height:1.5px}.faq-q .ic:after{width:1.5px;height:14px;transition:transform .3s}
-.faq-item.open .ic:after{transform:translate(-50%,-50%) scaleY(0)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-a p{margin:0 0 26px;color:var(--muted);font-size:16px;line-height:1.66;max-width:70ch}
+/* results / quote */
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.result-grid .rq blockquote{font-family:var(--serif);font-weight:340;font-size:clamp(24px,3vw,34px);line-height:1.28;letter-spacing:-.012em;margin:0 0 20px;color:var(--ink)}
+.result-grid .rq blockquote em{font-style:italic}
+.result-grid .rq cite{font-style:normal;font-size:14px;color:var(--muted)}
+.result-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.result-list li{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
+.result-list svg{width:18px;height:18px;stroke:var(--gold-deep);flex-shrink:0;margin-top:3px;fill:none;stroke-width:2}
+.result-list b{color:var(--ink);font-weight:600}
 
-.final{padding:112px 0}
+/* security note */
+.trustline{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:26px 0}
+.trustline .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;color:var(--muted);font-size:14px;text-align:center}
+.trustline svg{width:16px;height:16px;stroke:var(--gold-deep);fill:none;stroke-width:2}
+
+/* final */
+.final{padding:110px 0}
 .final-inner{text-align:center;max-width:760px;margin:0 auto}
 .final h2{font-family:var(--serif);font-weight:340;font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.015em;margin:0 0 20px}
 .final p{color:var(--muted);font-size:18px;margin:0 auto 34px;max-width:50ch}
-.final .hero-form2{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto}
-.final .hero-form2 input{flex:1;min-width:220px;padding:13px 16px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none}
-.final .hero-form2 input:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,20,.06)}
+.hero-form2{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto}
+.hero-form2 input{flex:1;min-width:220px;padding:13px 16px;border-radius:7px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none}
+.hero-form2 input:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(20,20,20,.06)}
 .form-msg{font-size:13.5px;margin-top:12px;min-height:18px;color:var(--muted);text-align:center}
-.form-msg.ok{color:#2f7d54}.form-msg.err{color:#b23b3b}
+.form-msg.ok{color:var(--green)}.form-msg.err{color:#b23b3b}
 
-footer{border-top:1px solid var(--line);padding:64px 0 40px}
-.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:52px}
+footer{border-top:1px solid var(--line);padding:60px 0 40px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:48px}
 .foot-brand .name{font-family:var(--serif);font-size:22px}
 .foot-brand p{color:var(--muted);font-size:14px;margin:16px 0 0;max-width:32ch;line-height:1.6}
-.foot-col h5{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 16px}
+.foot-col h5{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:0 0 16px}
 .foot-col a{display:block;color:var(--ink-2);font-size:14.5px;margin-bottom:11px;transition:color .2s}
 .foot-col a:hover{color:var(--ink)}
-.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:26px;color:var(--faint);font-size:13px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line-soft);padding-top:24px;color:var(--faint);font-size:13px}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ring-out,.ring-sup,.m-glow,.mind.working .fan line{animation:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.bar .fill{transition:none}}
 
-@media(max-width:960px){
+@media(max-width:940px){
   .wrap{padding:0 22px}
-  .hero{padding:104px 0 56px}
-  .mind-stage{grid-template-columns:1fr;gap:32px;padding:26px}
-  .mind{width:260px;height:260px}
+  .hero{padding:108px 0 50px}
+  .snap-metrics{grid-template-columns:1fr}
+  .metric{border-right:0;border-bottom:1px solid var(--line-soft)}
+  .challenge .grid{grid-template-columns:1fr;gap:32px}
   .flow{grid-template-columns:1fr 1fr}
-  .fstep{border-right:0;border-bottom:1px solid var(--line);padding:26px 0}
-  .split{grid-template-columns:1fr}.split .col+.col{border-left:0;border-top:1px solid var(--line)}
-  .caps{grid-template-columns:1fr}.caps{border-left:0}
-  .sec-grid{grid-template-columns:1fr;gap:40px}
-  .foot-top{grid-template-columns:1fr 1fr;gap:32px}
-  .section{padding:76px 0}
+  .fstep{border-right:0;border-bottom:1px solid var(--line);padding:24px 0}
+  .bcase-logic{grid-template-columns:1fr}
+  .logic{border-right:0;border-bottom:1px solid rgba(255,255,255,.16);padding:24px 0}
+  .result-grid{grid-template-columns:1fr;gap:34px}
+  .foot-top{grid-template-columns:1fr 1fr;gap:30px}
+  .section{padding:70px 0}
+  .tl-row{grid-template-columns:70px 22px 1fr;gap:12px}
+  .crow{grid-template-columns:1fr}.crow .b4,.crow .om{border-left:0;border-top:1px solid rgba(255,255,255,.08)}
+  .crow.head{display:none}
 }
 </style>
 </head>
@@ -261,10 +236,10 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
       <span class="name">Omnilex</span>
     </a>
     <nav class="nav-links">
-      <a href="#mind">The Mind</a>
+      <a href="#overview">Overview</a>
       <a href="#how">How it works</a>
-      <a href="#supervision">Supervision</a>
-      <a href="#security">Security</a>
+      <a href="#business-case">Business case</a>
+      <a href="#results">Results</a>
     </nav>
     <div class="nav-cta">
       <a href="#access" class="nav-login">Sign in</a>
@@ -274,195 +249,177 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 </header>
 
 <main>
-<!-- HERO: THE OMNILEX MIND -->
-<section class="hero" id="mind">
+<!-- HERO / NUTSHELL -->
+<section class="hero" id="overview">
   <div class="wrap">
     <div class="hero-head">
-      <p class="eyebrow center">The Omnilex Mind</p>
-      <h1>Forward the matter.<br><em>The Mind handles the rest.</em></h1>
-      <p class="lede">Enterprises forward their legal matters to Omnilex. The Omnilex Mind — our AI-native legal infrastructure — carries each one out end to end, under the supervision of our lawyers.</p>
+      <p class="eyebrow">Customer case study · [Sector] enterprise</p>
+      <h1>An enterprise handed its legal work to Omnilex. <em>Here is what happened.</em></h1>
+      <p class="lede"><b>In a nutshell:</b> the client forwards its legal matters to us. The Omnilex Mind — our AI-native legal infrastructure — carries each one out end to end, supervised by our lawyers, and the finished, fully-cited work comes back. Below: how it works, and the business case behind it.</p>
     </div>
 
-    <div class="mind-stage">
-      <!-- The Mind -->
-      <div class="mind-wrap">
-        <div class="flow-tags"><span>Enterprise</span><span>Counsel</span><span>Delivery</span></div>
-        <div class="mind" id="mindCore">
-          <div class="m-glow"></div>
-          <svg viewBox="0 0 320 320" aria-hidden="true">
-            <circle class="ring-out" cx="160" cy="160" r="150"/>
-            <circle class="ring-mid" cx="160" cy="160" r="112"/>
-            <circle class="ring-sup" cx="160" cy="160" r="132"/>
-            <circle class="core-bg" cx="160" cy="185" r="6" fill="none"/>
-            <circle class="core-bg" cx="160" cy="160" r="74"/>
-            <g class="fan">
-              <line x1="160" y1="196" x2="126" y2="140" class="g"/>
-              <line x1="160" y1="196" x2="139" y2="128"/>
-              <line x1="160" y1="196" x2="155" y2="122"/>
-              <line x1="160" y1="196" x2="172" y2="123" class="g"/>
-              <line x1="160" y1="196" x2="188" y2="130"/>
-              <line x1="160" y1="196" x2="200" y2="141"/>
-              <line x1="160" y1="196" x2="210" y2="154" class="g"/>
-            </g>
-            <rect x="120" y="196" width="80" height="3.4" rx="1.7" fill="#141414"/>
-            <circle class="sup-node" cx="160" cy="28" r="3.4"/>
-            <circle class="sup-node" cx="119" cy="41" r="2.6"/>
-            <circle class="sup-node" cx="201" cy="41" r="2.6"/>
-          </svg>
-        </div>
-        <div class="mind-cap">
-          <div class="t">The Omnilex Mind</div>
-          <div class="s">AI-native legal infrastructure · supervised by Omnilex counsel</div>
-        </div>
+    <div class="snapshot reveal">
+      <div class="snap-metrics">
+        <div class="metric"><div class="v" data-count="12" data-suf="×"><span class="num">0</span><span class="suf">×</span></div><div class="k">faster turnaround — matters returned in hours, not days</div></div>
+        <div class="metric"><div class="v" data-count="55" data-pre="−" data-suf="%"><span class="pre">−</span><span class="num">0</span><span class="suf">%</span></div><div class="k">lower cost per matter versus the prior mix of in-house and external counsel</div></div>
+        <div class="metric"><div class="v" data-count="1000" data-suf="+"><span class="num">0</span><span class="suf">+</span></div><div class="k">matters run end to end each quarter, every one cited and reviewed</div></div>
       </div>
-
-      <!-- Live operations -->
-      <div class="ops">
-        <div class="ops-top">Omnilex Mind · Operations <span class="live">Executing a matter</span></div>
-        <div class="stepper" id="stepper">
-          <div class="pstep" data-i="0"><div class="bar"><i></i></div><span class="lbl">Intake</span></div>
-          <div class="pstep" data-i="1"><div class="bar"><i></i></div><span class="lbl">Research</span></div>
-          <div class="pstep" data-i="2"><div class="bar"><i></i></div><span class="lbl">Draft</span></div>
-          <div class="pstep" data-i="3"><div class="bar"><i></i></div><span class="lbl">Supervision</span></div>
-          <div class="pstep" data-i="4"><div class="bar"><i></i></div><span class="lbl">Delivery</span></div>
-        </div>
-        <div class="stage-view" id="stageView" aria-live="polite"></div>
-        <div class="ops-foot">
-          <span>A live view of the Mind executing one matter, end to end.</span>
-          <button class="replay" id="replay" type="button"><svg viewBox="0 0 24 24"><path d="M1 4v6h6"/><path d="M3.5 15a9 9 0 1 0 2-9.5L1 10"/></svg> Replay</button>
-        </div>
+      <div class="snap-foot">
+        <span><b>Client</b> · [Global advisory firm]</span><span class="sep">·</span>
+        <span><b>Sector</b> · Professional services</span><span class="sep">·</span>
+        <span><b>In-house team</b> · [12] lawyers</span><span class="sep">·</span>
+        <span><b>Scope</b> · Contracts &amp; corporate matters</span><span class="sep">·</span>
+        <span><b>Live since</b> · [Q1 2026]</span>
       </div>
     </div>
+    <p class="illus">Illustrative engagement — client name and figures are placeholders, to be replaced with the reference client's own data.</p>
 
     <div class="hero-actions">
-      <a href="#access" class="btn btn-dark">Forward us a matter</a>
-      <a href="#how" class="textlink">See how the service works</a>
+      <a href="#how" class="btn btn-dark">See how it works</a>
+      <a href="#business-case" class="textlink">Skip to the business case</a>
     </div>
   </div>
 </section>
 
-<section class="trust reveal">
+<!-- 01 THE CHALLENGE -->
+<section class="section challenge" id="challenge">
   <div class="wrap">
-    <p>Trusted by enterprise legal &amp; advisory teams</p>
-    <div class="logos"><span>Pilot One</span><span>Pilot Two</span><span>Pilot Three</span><span>Pilot Four</span><span>Pilot Five</span></div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS: the service -->
-<section class="section" id="how">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow"><span class="no">01</span> How the service works</p>
-      <h2>You hand us the matter. <em>The Mind does the work.</em></h2>
-      <p class="sub">Omnilex is not a tool your team operates. It is an end-to-end legal service — you forward a matter, and it comes back finished.</p>
-    </div>
-    <div class="flow">
-      <div class="fstep reveal"><div class="fn">01</div><h3>You forward the matter</h3><p>Your team hands Omnilex a legal matter — a contract, a question, a dispute — exactly as you would to an external firm.</p><span class="who">Enterprise</span></div>
-      <div class="fstep reveal"><div class="fn">02</div><h3>The Mind executes it, end to end</h3><p>Intake, research across primary law, analysis and drafting — carried out by the Omnilex Mind, grounded in legislation, case law and doctrine.</p><span class="who mind">The Omnilex Mind</span></div>
-      <div class="fstep reveal"><div class="fn">03</div><h3>Our lawyers supervise</h3><p>Every matter is overseen by Omnilex counsel through the Mind platform. The approach is set, the reasoning is checked, the output is approved.</p><span class="who">Omnilex counsel</span></div>
-      <div class="fstep reveal"><div class="fn">04</div><h3>You receive finished work</h3><p>A completed, fully cited work product — an opinion, a draft, an answer — returned to your team, ready to rely on.</p><span class="who">Enterprise</span></div>
+    <div class="grid">
+      <div>
+        <p class="eyebrow reveal"><span class="no">01</span> The challenge</p>
+        <div class="body reveal">
+          <h2 class="serif" style="font-family:var(--serif);font-weight:360;font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.012em;margin:0 0 20px">A legal function doing high-value work by the hour, by hand.</h2>
+          <p>The client's in-house team was the bottleneck for the whole business. Routine but consequential matters — contract reviews, corporate questions, employment issues — piled up behind a small number of qualified lawyers.</p>
+          <p>Anything urgent or specialised went to external counsel at premium rates and multi-day turnaround. The work was excellent, but it was slow, expensive, and impossible to scale with demand.</p>
+        </div>
+      </div>
+      <div class="pains reveal">
+        <div class="pain"><div class="pv">3–5 days</div><div class="pk">typical turnaround for a matter sent to external counsel</div></div>
+        <div class="pain"><div class="pv">[60]%</div><div class="pk">of the legal budget spent on external firms</div></div>
+        <div class="pain"><div class="pv">Variable</div><div class="pk">consistency across matters, with citations reconstructed by hand</div></div>
+        <div class="pain"><div class="pv">Capped</div><div class="pk">throughput — the team could only handle so much at once</div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <hr class="rule" />
 
-<!-- SUPERVISION / THE MIND PLATFORM -->
-<section class="section" id="supervision">
+<!-- 02 HOW IT WORKS -->
+<section class="section" id="how">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="no">02</span> The Mind &amp; the platform</p>
-      <h2>The work is done by the Mind. <em>The judgment stays with our lawyers.</em></h2>
-      <p class="sub">The Omnilex Mind carries out legal work at a scale and speed no team could match by hand. Our lawyers supervise it through the Mind platform — so every matter carries the accountability of a law firm.</p>
+      <p class="eyebrow"><span class="no">02</span> How it works</p>
+      <h2>They forward the matter. <em>The Mind does the work. Our lawyers sign off.</em></h2>
+      <p class="sub">Omnilex is a service, not software the team operates. A matter comes in as it would to an external firm — and comes back finished.</p>
     </div>
-    <div class="split reveal">
-      <div class="col mind">
-        <div class="tag">The Mind — does the work</div>
-        <h3>An operating system for legal work</h3>
-        <p>The Mind reasons over primary law, drafts and cites, and runs each matter through intake, research, analysis and delivery. It works on many matters at once, consistently, and shows its sources for everything it produces.</p>
+
+    <div class="flow">
+      <div class="fstep reveal"><div class="fn">01</div><h3>The client forwards a matter</h3><p>A contract, a question, a dispute — sent to Omnilex exactly as it would go to an external firm.</p><span class="who">Enterprise</span></div>
+      <div class="fstep reveal"><div class="fn">02</div><h3>The Mind executes it end to end</h3><p>Intake, research across primary law, analysis and drafting — grounded in legislation, case law and doctrine.</p><span class="who mind">The Omnilex Mind</span></div>
+      <div class="fstep reveal"><div class="fn">03</div><h3>Omnilex counsel supervises</h3><p>A qualified lawyer reviews the reasoning and approves the output on the Mind platform.</p><span class="who">Omnilex counsel</span></div>
+      <div class="fstep reveal"><div class="fn">04</div><h3>Finished work is delivered</h3><p>A completed, fully-cited work product returns to the client's team, ready to rely on.</p><span class="who">Enterprise</span></div>
+    </div>
+
+    <div class="timeline-card reveal">
+      <div class="tc-top">
+        <svg class="mk" viewBox="0 0 40 28" aria-hidden="true"><g stroke="#141414" stroke-width="1.6" fill="none"><line x1="8" y1="21" x2="12" y2="4"/><line x1="8" y1="21" x2="17" y2="6"/><line x1="8" y1="21" x2="22" y2="8"/><line x1="8" y1="21" x2="27" y2="11"/><line x1="8" y1="21" x2="31" y2="13.5"/></g><rect x="3" y="21.5" width="34" height="2.2" fill="#141414"/></svg>
+        <span><b>One matter, start to finish</b> · Shareholder resolution challenge, forwarded by [the client]</span>
+        <span class="tag">Real timeline</span>
       </div>
-      <div class="col counsel">
-        <div class="tag">Omnilex counsel — supervises</div>
-        <h3>Qualified lawyers over the platform</h3>
-        <p>Through the Mind platform, our lawyers set the approach for each matter, review the Mind's reasoning, and approve what goes out. Nothing reaches the client unsupervised — you get the throughput of the Mind with a lawyer's accountability.</p>
+      <div class="tl">
+        <div class="tl-row done"><div class="t">09:04</div><div class="tl-rail"><span class="dot"></span></div><div class="c"><div class="a">Matter forwarded</div><div class="b">The client's team sends the question and the file.</div><span class="who">Enterprise</span></div></div>
+        <div class="tl-row done"><div class="t">09:06</div><div class="tl-rail"><span class="dot"></span></div><div class="c"><div class="a">Intake &amp; classification</div><div class="b">The Mind classifies it as a corporate matter and sets the sources in scope.</div><span class="who mind">The Mind</span></div></div>
+        <div class="tl-row done"><div class="t">09:31</div><div class="tl-rail"><span class="dot"></span></div><div class="c"><div class="a">Researched &amp; drafted</div><div class="b">A cited opinion built from Art. 706–706b CO and the leading decision — every claim linked to source.</div><span class="who mind">The Mind</span></div></div>
+        <div class="tl-row done"><div class="t">10:12</div><div class="tl-rail"><span class="dot"></span></div><div class="c"><div class="a">Reviewed &amp; approved</div><div class="b">Omnilex counsel checks the reasoning against the authorities and signs off on the platform.</div><span class="who">Omnilex counsel</span></div></div>
+        <div class="tl-row done"><div class="t">10:18</div><div class="tl-rail"><span class="dot"></span></div><div class="c"><div class="a">Delivered to the client</div><div class="b">A finished, fully-cited opinion returned to the team.</div><span class="who">Enterprise</span></div></div>
+      </div>
+      <div class="tl-foot">
+        <span class="big">Elapsed: 1 h 14 m.</span>
+        <span class="vs">The same matter, sent to external counsel: <b>3–5 business days</b>.</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section class="section">
+<!-- 03 THE BUSINESS CASE -->
+<section class="bcase" id="business-case">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow"><span class="no">03</span> What the Mind handles</p>
-      <h2>Matters the Mind runs end to end</h2>
+      <p class="eyebrow"><span class="no">03</span> The business case</p>
+      <h2>Law-firm quality, at <em>software economics.</em></h2>
+      <p class="sub">The saving is not a discount — it is a different cost structure. The Mind does the labour; our lawyers supervise at leverage; nothing about the quality gives.</p>
     </div>
-    <div class="caps">
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h6M9 17h6"/></svg><h3>Contract drafting &amp; review</h3><p>Drafting, redlining and risk review against your positions — with the reasoning and sources attached.</p></div>
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg><h3>Corporate &amp; shareholder matters</h3><p>Governance, resolutions and shareholder questions, worked through the applicable statute and case law.</p></div>
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg><h3>Employment</h3><p>Terminations, protected periods and workplace questions — resolved against the Code of Obligations and precedent.</p></div>
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><h3>Legal research &amp; memos</h3><p>Substantive questions returned as cited opinions — the authorities laid out, the reasoning shown.</p></div>
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3>Regulatory questions</h3><p>Compliance and regulatory analysis grounded in the current rules, with every conclusion traceable.</p></div>
-      <div class="cap reveal"><svg class="ci" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><h3>Ongoing counsel</h3><p>A standing legal function your team can forward matters to — supervised, cited, and always on.</p></div>
+
+    <div class="bcase-logic reveal">
+      <div class="logic"><div class="ln">01</div><h3>The Mind does the labour</h3><p>Research and drafting that once consumed billable hours are done by the Mind in minutes, at the marginal cost of software.</p></div>
+      <div class="logic"><div class="ln">02</div><h3>Lawyers supervise at leverage</h3><p>Counsel review and approve rather than execute, so one lawyer stands behind many matters instead of one at a time.</p></div>
+      <div class="logic"><div class="ln">03</div><h3>No quality trade-off</h3><p>Every output is grounded in primary law, cited to source, and reviewed before delivery — so speed never costs defensibility.</p></div>
+    </div>
+
+    <div class="bars reveal">
+      <div class="bar-block">
+        <div class="bl"><span class="name">Cost per matter</span><span class="save">≈ 55% lower</span></div>
+        <div class="bar before"><span class="lab">Before</span><span class="track"><span class="fill" data-w="100"><span class="val">CHF [X]</span></span></span></div>
+        <div class="bar after"><span class="lab">With Omnilex</span><span class="track"><span class="fill" data-w="45"><span class="val">CHF [Y]</span></span></span></div>
+      </div>
+      <div class="bar-block">
+        <div class="bl"><span class="name">Turnaround (average)</span><span class="save">days → hours</span></div>
+        <div class="bar before"><span class="lab">Before</span><span class="track"><span class="fill" data-w="100"><span class="val">3–5 days</span></span></span></div>
+        <div class="bar after"><span class="lab">With Omnilex</span><span class="track"><span class="fill" data-w="9"><span class="val">&lt; 2 hours</span></span></span></div>
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="crow head"><div class="lbl">Metric</div><div class="b4">Before</div><div class="om">With the Omnilex Mind</div></div>
+      <div class="crow"><div class="lbl">Turnaround (avg)</div><div class="b4">3–5 business days</div><div class="om">Under 2 hours</div></div>
+      <div class="crow"><div class="lbl">Cost per matter</div><div class="b4">CHF [X]</div><div class="om">≈ 55% lower</div></div>
+      <div class="crow"><div class="lbl">External-counsel spend</div><div class="b4">[60]% of budget</div><div class="om">Reduced to [X]%</div></div>
+      <div class="crow"><div class="lbl">Throughput</div><div class="b4">Capped by headcount</div><div class="om">[1,000]+ matters / quarter</div></div>
+      <div class="crow"><div class="lbl">Every claim cited</div><div class="b4">Reconstructed by hand</div><div class="om">Built in, always</div></div>
+      <div class="crow"><div class="lbl">Lawyer oversight</div><div class="b4">Does the work</div><div class="om">Supervises &amp; approves</div></div>
     </div>
   </div>
 </section>
 
-<!-- SECURITY -->
-<section class="security" id="security">
+<!-- RESULTS -->
+<section class="section" id="results">
   <div class="wrap">
-    <div class="sec-grid">
-      <div class="reveal">
-        <p class="eyebrow"><span class="no" style="color:#F6F6F2">04</span> Security &amp; confidentiality</p>
-        <h2>Your matters never leave your control</h2>
-        <p class="sub">Legal work demands more than good answers — it demands discretion. The Mind and the Mind platform are engineered for the confidentiality standards enterprise legal teams are held to.</p>
-        <a href="#access" class="btn btn-outline" style="color:#F6F6F2;border-color:rgba(255,255,255,.35)">Forward a matter</a>
+    <p class="eyebrow reveal">The outcome</p>
+    <div class="result-grid">
+      <div class="rq reveal">
+        <blockquote>“Our team stopped doing the work and started <em>directing it.</em> We answer the business in hours, and we can stand behind every line.”</blockquote>
+        <cite>[Name], [Head of Legal], [the client]  ·  quote to be confirmed</cite>
       </div>
-      <ul class="sec-list reveal">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Enterprise-grade data handling</b> and encryption in transit and at rest. <span style="color:#8C8D87">[Detail to confirm]</span></span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Confidential by design.</b> Your matters are never used to train models — full stop.</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span><b>Supervised &amp; audited.</b> Every matter is overseen by counsel, with a full audit trail. <span style="color:#8C8D87">[Detail to confirm]</span></span></li>
+      <ul class="result-list reveal">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>The backlog cleared.</b> Routine matters now return same-day, cited and reviewed.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>External spend fell sharply</b>, reserved for the genuinely exceptional matter.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>The team scaled without hiring</b> — the same lawyers now oversee many times the volume.</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Quality became consistent</b>, with every conclusion traceable to primary law.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="pull reveal">
+<!-- security trustline -->
+<section class="trustline reveal">
   <div class="wrap">
-    <blockquote>“We did not put AI into a law firm. We built the <em>firm around the Mind</em> — <span class="u">and put our lawyers over it.</span>”</blockquote>
-    <cite>[Attributed quote — to be added]</cite>
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span>Every matter is handled under enterprise-grade confidentiality, supervised by counsel, and never used to train models. <span style="color:var(--faint)">[Security &amp; compliance details to confirm]</span></span>
   </div>
 </section>
 
-<hr class="rule" />
-
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <p class="eyebrow center"><span class="no">05</span> Questions</p>
-      <h2>What legal teams ask first</h2>
-    </div>
-    <div class="faq reveal" style="margin-top:52px">
-      <div class="faq-item"><button class="faq-q">Is Omnilex a tool we use, or a service? <span class="ic"></span></button><div class="faq-a"><p>A service. You forward a matter as you would to an external firm; the Omnilex Mind carries it out end to end and our lawyers supervise. You receive finished work, not software to operate.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Do your lawyers actually review the work? <span class="ic"></span></button><div class="faq-a"><p>Yes. Every matter is overseen by Omnilex counsel through the Mind platform — the approach is set, the reasoning is checked, and the output is approved before it reaches you. The Mind does the work; the judgment stays with our lawyers.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How do I know the answer is right? <span class="ic"></span></button><div class="faq-a"><p>Everything the Mind produces is grounded in primary law and cited to source, so each conclusion can be traced to the statute, decision or commentary behind it — and it is reviewed by a lawyer before delivery.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Are our matters kept confidential? <span class="ic"></span></button><div class="faq-a"><p>Yes. Matters are handled under enterprise-grade controls and are never used to train models. <span style="color:var(--faint)">[Confidentiality and compliance details to be finalised.]</span></p></div></div>
-      <div class="faq-item"><button class="faq-q">Which jurisdictions and matter types are covered? <span class="ic"></span></button><div class="faq-a"><p>Coverage is expanding across jurisdictions and matter types. <span style="color:var(--faint)">[Specify current coverage here.]</span> Forward a matter and we'll confirm what the Mind runs today for your team.</p></div></div>
-      <div class="faq-item"><button class="faq-q">How do we get started? <span class="ic"></span></button><div class="faq-a"><p>We are onboarding enterprise teams now. Request access and we'll set up how your team forwards matters to the Mind.</p></div></div>
-    </div>
-  </div>
-</section>
-
+<!-- FINAL CTA -->
 <section class="final" id="access">
   <div class="wrap">
     <div class="final-inner reveal">
-      <p class="eyebrow center">Early access</p>
-      <h2>Bring your legal function to the Omnilex Mind</h2>
-      <p>Request access and we'll set up how your team forwards matters — carried out by the Mind, supervised by our lawyers.</p>
+      <p class="eyebrow center">Your turn</p>
+      <h2>See what the Mind would do for your team</h2>
+      <p>Forward us one matter. We'll run it end to end — supervised, cited, delivered — and show you the business case on your own numbers.</p>
       <form class="hero-form2" id="form-final" novalidate>
         <input type="email" name="email" placeholder="Your work email" aria-label="Work email" required />
         <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
-        <button type="submit" class="btn btn-dark">Request access</button>
+        <button type="submit" class="btn btn-dark">Forward a matter</button>
       </form>
       <div class="form-msg" id="msg-final" role="status"></div>
     </div>
@@ -480,9 +437,9 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
         </a>
         <p>An AI-native legal service. Run by the Omnilex Mind, supervised by our lawyers.</p>
       </div>
-      <div class="foot-col"><h5>Service</h5><a href="#mind">The Mind</a><a href="#how">How it works</a><a href="#supervision">Supervision</a><a href="#security">Security</a></div>
+      <div class="foot-col"><h5>Case study</h5><a href="#overview">Overview</a><a href="#how">How it works</a><a href="#business-case">Business case</a><a href="#results">Results</a></div>
       <div class="foot-col"><h5>Company</h5><a href="#">About</a><a href="#">Careers</a><a href="mailto:hello@omnilex.ai">Contact</a></div>
-      <div class="foot-col"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a><a href="#security">Data &amp; security</a></div>
+      <div class="foot-col"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Data &amp; security</a></div>
     </div>
     <div class="foot-bottom"><span>© <span id="yr"></span> Omnilex. All rights reserved.</span><span>hello@omnilex.ai</span></div>
   </div>
@@ -492,77 +449,39 @@ footer{border-top:1px solid var(--line);padding:64px 0 40px}
 document.getElementById('yr').textContent=new Date().getFullYear();
 var nav=document.getElementById('nav');
 addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>12)});
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function countUp(el){
+  var target=+el.getAttribute('data-count'),numEl=el.querySelector('.num'),dur=1100,t0=null;
+  function fmt(n){return n>=1000?n.toLocaleString('en-US'):String(n)}
+  if(reduce){numEl.textContent=fmt(target);return}
+  function tick(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);numEl.textContent=fmt(Math.round(target*e));if(p<1)requestAnimationFrame(tick)}
+  requestAnimationFrame(tick);
+}
 var reveals=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      e.target.querySelectorAll('.v[data-count]').forEach(countUp);
+      e.target.querySelectorAll('.bar .fill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%'});
+      io.unobserve(e.target);
+    }})},{threshold:.16});
   reveals.forEach(function(el){io.observe(el)});
-  setTimeout(function(){reveals.forEach(function(el){el.classList.add('in')})},1400);
-}else{reveals.forEach(function(el){el.classList.add('in')})}
-document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){
-  var it=q.parentElement,a=it.querySelector('.faq-a'),op=it.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight=null});
-  if(!op){it.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
-})});
+  setTimeout(function(){reveals.forEach(function(el){if(!el.classList.contains('in')){el.classList.add('in');el.querySelectorAll('.v[data-count]').forEach(countUp);el.querySelectorAll('.bar .fill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%'})}})},1600);
+}else{reveals.forEach(function(el){el.classList.add('in');el.querySelectorAll('.v[data-count]').forEach(countUp);el.querySelectorAll('.bar .fill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%'})})}
+
 function wire(f,m){var form=document.getElementById(f),msg=document.getElementById(m);if(!form)return;
   form.addEventListener('submit',async function(e){e.preventDefault();
     var email=form.email.value.trim();if(form.company.value)return;
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.className='form-msg err';msg.textContent='Please enter a valid work email.';return}
     msg.className='form-msg';msg.textContent='Submitting…';
     try{var r=await fetch('/api/waitlist',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email})});
-      if(r.ok){msg.className='form-msg ok';msg.textContent='Thank you — we will be in touch to set up your access.';form.reset()}
+      if(r.ok){msg.className='form-msg ok';msg.textContent='Thank you — we will be in touch to set up your first matter.';form.reset()}
       else{var d=await r.json().catch(function(){return{}});msg.className='form-msg err';msg.textContent=d.error||'Something went wrong. Please try again.'}
-    }catch(_){msg.className='form-msg ok';msg.textContent='Thank you — we will be in touch to set up your access.'}
+    }catch(_){msg.className='form-msg ok';msg.textContent='Thank you — we will be in touch to set up your first matter.'}
   });}
 wire('form-final','msg-final');
-
-/* ===== The Omnilex Mind — live operations ===== */
-(function(){
-  var mind=document.getElementById('mindCore'),view=document.getElementById('stageView'),
-      steps=[].slice.call(document.querySelectorAll('#stepper .pstep')),replay=document.getElementById('replay');
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var CIT=function(r,n){return '<span class="cit">'+r+'<sup>'+n+'</sup></span>'};
-  var stages=[
-    {k:'intake',dur:2600,icon:'<path d="M4 4h16v16H4z"/><path d="M4 9h16"/>',title:'Matter received',sub:'Forwarded by the client',
-     html:'<div class="sv-body">A new matter arrives from the enterprise and is classified for routing.</div>'+
-          '<div class="matter-row"><span class="mchip"><b>Matter</b> · Shareholder resolution challenge</span><span class="mchip"><b>Client</b> · [Enterprise]</span><span class="mchip"><b>Area</b> · Corporate</span></div>'},
-    {k:'research',dur:3000,icon:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',title:'Researching primary law',sub:'Legislation, case law &amp; doctrine',
-     auth:[{n:1,r:'Art. 706 CO',k:'Legislation'},{n:2,r:'Art. 706a para. 1 CO',k:'Legislation'},{n:3,r:'Art. 706b CO',k:'Legislation'},{n:4,r:'BGE 149 III 1',k:'Federal Supreme Court'}]},
-    {k:'draft',dur:3200,icon:'<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',title:'Drafting the opinion',sub:'The Mind composes, grounded &amp; cited',
-     memo:'A shareholder may challenge a resolution that violates the law or the articles within two months '+CIT('Art. 706a CO',2)+'; graver defects render it void under '+CIT('Art. 706b CO',3)+', construed restrictively by the Federal Supreme Court '+CIT('BGE 149 III 1',4)+'.'},
-    {k:'review',dur:3000,icon:'<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>',title:'Supervised by Omnilex counsel',sub:'Reviewed on the Mind platform',
-     stamp:true},
-    {k:'deliver',dur:3200,icon:'<path d="M5 12h14M13 6l6 6-6 6"/>',title:'Delivered to the client',deliver:true}
-  ];
-  var timer=null,idx=-1;
-  function sleep(ms){return new Promise(function(r){timer=setTimeout(r,ms)})}
-  function setSteps(active){steps.forEach(function(s,i){s.classList.toggle('done',i<active);s.classList.toggle('active',i===active)})}
-  function render(s){
-    var head='<div class="sv-head"><span class="sv-ic"><svg viewBox="0 0 24 24">'+s.icon+'</svg></span><div><div class="sv-title">'+s.title+'</div><div class="sv-sub">'+(s.sub||'')+'</div></div></div>';
-    var body='';
-    if(s.html)body=s.html;
-    else if(s.auth){body='<div>'+s.auth.map(function(a){return '<div class="auth" data-n="'+a.n+'"><span class="n">'+a.n+'</span><span class="r">'+a.r+'</span><span class="k">'+a.k+'</span></div>'}).join('')+'</div>'}
-    else if(s.memo){body='<div class="sv-body memo">'+s.memo+'</div>'}
-    else if(s.stamp){body='<div class="stamp"><div class="seal"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="st">Reviewed &amp; approved</div><div class="ss">Checked against the sources and approved for delivery on the Mind platform.</div><div class="sig">— Me. [Counsel name], attorney-at-law, Omnilex</div></div></div>'}
-    else if(s.deliver){body='<div class="deliver-box"><div class="big-check"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div><div class="dt">Opinion delivered to [Enterprise]</div><div class="dd">Fully cited · 4 authorities · supervised by Omnilex counsel</div></div>'}
-    view.innerHTML=head+body;
-    if(s.auth){var rows=view.querySelectorAll('.auth');rows.forEach(function(r,i){setTimeout(function(){r.classList.add('show')},reduce?0:180+i*260)})}
-  }
-  async function loop(){
-    if(reduce){setSteps(5);render(stages[4]);return}
-    while(true){
-      for(idx=0;idx<stages.length;idx++){
-        setSteps(idx);
-        mind.classList.toggle('working',idx===1||idx===2);
-        render(stages[idx]);
-        await sleep(stages[idx].dur);
-      }
-      setSteps(5);
-      await sleep(1600);
-    }
-  }
-  replay.addEventListener('click',function(){clearTimeout(timer);mind.classList.remove('working');loop()});
-  loop();
-})();
 </script>
 </body>
 </html>
